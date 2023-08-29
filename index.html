@@ -4,10 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test Your Keyboard!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/segoe-fonts@1.0.1/segoe-fonts.min.css"
+    />
+
+    <link href="general.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <script defer src="script.js"></script>
   </head>
   <body>
     <header></header>
-    <main></main>
+    <main class="container">
+      <div class="keyboard">
+        <!-- contains "ESC" & Function (F1-F12) & Top-Located Control (Prt Sc|Scrl lck|Pause) keys -->
+        <section class="function region">
+          <div class="key">ESC</div>
+        </section>
+
+        <!-- contains Modifiers/Control (Ctrl|Alt|etc.) & Alpha (A-Z) keys -->
+        <section class="typewriter region">typewriter-region</section>
+        <!-- contains Navigation (PgUp|PgDn|etc.) & Arrow keys -->
+        <section class="navigation region">
+          <div class="key insert-key">Insert</div>
+          <div class="key home-key">Home</div>
+          <div class="key pgup-key">Pg Up</div>
+          <div class="key delete-key">Delete</div>
+          <div class="key end-key">End</div>
+          <div class="key pgdn-key">Pg Dn</div>
+          <div class="key arrowup-key"><span>&lt;</span></div>
+          <div class="key arrowleft-key">&lt;</div>
+          <div class="key arrowdown-key"><span>&lt;</span></div>
+          <div class="key arrowright-key"><span>&lt;</span></div>
+        </section>
+        <!-- contains Numpad Keys -->
+        <section class="numpad region">
+          <div class="key numlock-key">Num Lk</div>
+          <div class="key divison-key">/</div>
+          <div class="key multiplication-key">&times;</div>
+          <div class="key subtraction-key">&minus;</div>
+          <div class="key numpad7-key">7</div>
+          <div class="key numpad8-key">8</div>
+          <div class="key numpad9-key">9</div>
+          <div class="key addition-key">&plus;</div>
+          <div class="key numpad4-key">4</div>
+          <div class="key numpad5-key">5</div>
+          <div class="key numpad6-key">6</div>
+          <div class="key numpad1-key">1</div>
+          <div class="key numpad2-key">2</div>
+          <div class="key numpad3-key">3</div>
+          <div class="key numpadEnter-key">Enter</div>
+          <div class="key numpad0-key">0</div>
+          <div class="key dot-key">&middot;</div>
+        </section>
+      </div>
+    </main>
     <footer></footer>
   </body>
 </html>
