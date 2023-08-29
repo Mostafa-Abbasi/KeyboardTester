@@ -20,35 +20,135 @@
         <!-- contains "ESC" & Function (F1-F12) & Top-Located Control (Prt Sc|Scrl lck|Pause) keys -->
         <section class="function region">
           <div class="key esc-key">ESC</div>
-          <div class="key-group">
-            <div class="key f1-key">F1</div>
-            <div class="key f2-key">F2</div>
-            <div class="key f3-key">F3</div>
-            <div class="key f4-key">F4</div>
-          </div>
-          <div class="key-group">
-            <div class="key f5-key">F5</div>
-            <div class="key f6-key">F6</div>
-            <div class="key f7-key">F7</div>
-            <div class="key f8-key">F8</div>
-          </div>
-          <div class="key-group">
-            <div class="key f9-key">F9</div>
-            <div class="key f10-key">F10</div>
-            <div class="key f11-key">F11</div>
-            <div class="key f12-key">F12</div>
-          </div>
-          <div class="key-group">
-            <div class="key printscreen-key">Prt Sc</div>
-            <div class="key scrolllock-key">Scr Lk</div>
-            <div class="key pause-key">Pause</div>
-          </div>
+          <div class="empty-space-between-keys"></div>
+          <div class="key f1-key">F1</div>
+          <div class="key f2-key">F2</div>
+          <div class="key f3-key">F3</div>
+          <div class="key f4-key">F4</div>
+          <div class="empty-space-between-keys"></div>
+          <div class="key f5-key">F5</div>
+          <div class="key f6-key">F6</div>
+          <div class="key f7-key">F7</div>
+          <div class="key f8-key">F8</div>
+          <div class="empty-space-between-keys"></div>
+          <div class="key f9-key">F9</div>
+          <div class="key f10-key">F10</div>
+          <div class="key f11-key">F11</div>
+          <div class="key f12-key">F12</div>
+          <div class="empty-space-between-keys"></div>
+          <div class="key printscreen-key">Prt Sc</div>
+          <div class="key scrolllock-key">Scr Lk</div>
+          <div class="key pause-key">Pause</div>
         </section>
 
-        <!-- contains Modifiers/Control (Ctrl|Alt|etc.) & Alpha (A-Z) keys -->
+        <!-- contains Modifier/Control (Ctrl|Alt|etc.) & Alpha (A-Z) keys -->
         <section class="typewriter region">
           <!-- number row -->
-          <div class="first-row"></div>
+          <div class="first-row">
+            <div class="key tilde-key">~</div>
+            <div class="key number1-key">1</div>
+            <div class="key number2-key">2</div>
+            <div class="key number3-key">3</div>
+            <div class="key number4-key">4</div>
+            <div class="key number5-key">5</div>
+            <div class="key number6-key">6</div>
+            <div class="key number7-key">7</div>
+            <div class="key number8-key">8</div>
+            <div class="key number9-key">9</div>
+            <div class="key number0-key">0</div>
+            <div class="key minus-key">&minus;</div>
+            <div class="key equals-key">&equals;</div>
+            <div class="key backspace-key">Backspace</div>
+          </div>
+
+          <!-- qwerty row -->
+          <div class="second-row">
+            <div class="key tab-key">Tab</div>
+            <div class="key q-key">Q</div>
+            <div class="key w-key">W</div>
+            <div class="key e-key">E</div>
+            <div class="key r-key">R</div>
+            <div class="key t-key">T</div>
+            <div class="key y-key">Y</div>
+            <div class="key u-key">U</div>
+            <div class="key i-key">I</div>
+            <div class="key o-key">O</div>
+            <div class="key p-key">P</div>
+            <div class="key lbracket-key">[</div>
+            <div class="key rbracket-key">]</div>
+            <div class="key backslash-key">\</div>
+          </div>
+
+          <!-- asdfg row -->
+          <div class="third-row">
+            <div class="key caps-key">Caps</div>
+            <div class="key a-key">A</div>
+            <div class="key s-key">S</div>
+            <div class="key d-key">D</div>
+            <div class="key f-key">F</div>
+            <div class="key g-key">G</div>
+            <div class="key h-key">H</div>
+            <div class="key j-key">J</div>
+            <div class="key k-key">K</div>
+            <div class="key l-key">L</div>
+            <div class="key semicolon-key">:</div>
+            <div class="key apostrophe-key">"</div>
+            <div class="key enter-key">Enter</div>
+          </div>
+
+          <!-- zxcvb row -->
+          <div class="fourth-row">
+            <div class="key leftshift-key">Shift</div>
+            <div class="key z-key">Z</div>
+            <div class="key x-key">X</div>
+            <div class="key c-key">C</div>
+            <div class="key v-key">V</div>
+            <div class="key b-key">B</div>
+            <div class="key n-key">N</div>
+            <div class="key m-key">M</div>
+            <div class="key comma-key">&lt;</div>
+            <div class="key period-key">&period;</div>
+            <div class="key slash-key">/</div>
+            <div class="key rightshift-key">Shift</div>
+          </div>
+
+          <!-- bottom row containing space etc. -->
+          <div class="fifth-row">
+            <div class="key leftcontrol-key">Ctrl</div>
+            <div class="key windows-key">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4875 4875">
+                <path
+                  fill="#888"
+                  d="M0 0h2311v2310H0zm2564 0h2311v2310H2564zM0 2564h2311v2311H0zm2564 0h2311v2311H2564"
+                />
+              </svg>
+            </div>
+            <div class="key leftalt-key">Alt</div>
+            <div class="key space-key"></div>
+            <div class="key rightalt-key">Alt</div>
+            <div class="key fn-key">Fn</div>
+            <div class="key menu-key">
+              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <rect
+                  x="10"
+                  y="10"
+                  width="80"
+                  height="80"
+                  rx="2"
+                  ry="2"
+                  stroke="#555"
+                  stroke-width="5"
+                  fill="none"
+                />
+                <g fill="#555">
+                  <rect x="25" y="30" width="50" height="5" rx="2" ry="2" />
+                  <rect x="25" y="47.5" width="50" height="5" rx="2" ry="2" />
+                  <rect x="25" y="65" width="50" height="5" rx="2" ry="2" />
+                </g>
+              </svg>
+            </div>
+            <div class="key rightcontrol-key">Ctrl</div>
+          </div>
         </section>
 
         <!-- contains Navigation (PgUp|PgDn|etc.) & Arrow keys -->
@@ -67,7 +167,7 @@
 
         <!-- contains Numpad Keys -->
         <section class="numpad region">
-          <div class="key numlock-key">Num Lk</div>
+          <div class="key numlock-key">NumLk</div>
           <div class="key divison-key">/</div>
           <div class="key multiplication-key">&times;</div>
           <div class="key subtraction-key">&minus;</div>

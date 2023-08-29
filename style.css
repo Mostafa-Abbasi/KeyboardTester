@@ -7,6 +7,11 @@
   display: grid;
   /* These numbers came from a standard keyboard layout */
   grid-template-columns: 217fr 2fr 45fr 1fr 60fr;
+
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+  background-color: #343a40;
+  box-shadow: 0 0.4rem 0 0.6rem #212529, 0 1.2rem 3.2rem rgba(0, 0, 0, 0.075);
 }
 
 .key {
@@ -17,7 +22,7 @@
   align-items: center;
 
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 600;
   background-color: #f1f3f5;
 
   border-radius: 0.7rem;
@@ -42,21 +47,44 @@
   grid-column: 1 / span 3;
 
   display: grid;
-  grid-template-columns: 1fr 4fr 4fr 4fr 3fr;
-
-  border: 1px solid blue;
-}
-
-.key-group {
-  display: flex;
-  justify-content: end;
-  gap: 0.2rem;
+  grid-template-columns:
+    14fr 15fr repeat(4, 14fr) 7fr repeat(4, 14fr) 7fr repeat(4, 14fr)
+    3fr repeat(3, 14fr);
 }
 
 /* contains Modifiers/Control (Ctrl|Alt|etc.) & Alpha (A-Z) keys */
 .typewriter {
   grid-column: 1 / 2;
-  border: 1px solid red;
+  display: grid;
+}
+
+.typewriter .first-row,
+.second-row,
+.third-row,
+.fourth-row,
+.fifth-row {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.first-row {
+  grid-template-columns: repeat(13, 1fr) 2fr;
+}
+
+.second-row {
+  grid-template-columns: 21fr repeat(12, 14fr) 21fr;
+}
+
+.third-row {
+  grid-template-columns: 25fr repeat(11, 14fr) 32fr;
+}
+
+.fourth-row {
+  grid-template-columns: 32fr repeat(10, 14fr) 39fr;
+}
+
+.fifth-row {
+  grid-template-columns: repeat(3, 18fr) 89fr repeat(4, 18fr);
 }
 
 /* contains Navigation (PgUp|PgDn|etc.) & Arrow keys */
@@ -66,8 +94,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5, 1fr);
-
-  border: 1px solid green;
 }
 
 /* contains Numpad Keys */
@@ -77,10 +103,78 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
-
-  border: 1px solid brown;
 }
 
+/************************/
+/* FUNCTION REGION KEYS */
+/************************/
+
+/**************************/
+/* TYPEWRITER REGION KEYS */
+/**************************/
+
+.leftcontrol-key,
+.windows-key,
+.leftalt-key,
+.rightalt-key,
+.fn-key,
+.menu-key,
+.rightcontrol-key {
+  width: calc((var(--initial-width) * 1.28) + 0.2rem);
+}
+
+.tab-key,
+.backslash-key {
+  width: calc((var(--initial-width) * 1.5) + 0.2rem);
+}
+
+.caps-key {
+  width: calc((var(--initial-width) * 1.8) + 0.2rem);
+}
+
+.backspace-key {
+  width: calc((var(--initial-width) * 2.02) + 0.2rem);
+}
+
+.enter-key,
+.leftshift-key {
+  width: calc((var(--initial-width) * 2.32) + 0.2rem);
+}
+
+.rightshift-key {
+  width: calc((var(--initial-width) * 2.82) + 0.2rem);
+}
+
+.space-key {
+  width: calc((var(--initial-width) * 6.36) + 0.2rem);
+}
+
+.windows-key svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.menu-key svg {
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+.tilde-key,
+.tab-key,
+.caps-key,
+.leftshift-key,
+.leftcontrol-key {
+  justify-content: left;
+  padding-left: 1.6rem;
+}
+
+.backspace-key,
+.enter-key,
+.rightshift-key,
+.rightcontrol-key {
+  justify-content: right;
+  padding-right: 1.6rem;
+}
 /**************************/
 /* NAVIGATION REGION KEYS */
 /**************************/
