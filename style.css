@@ -1,3 +1,8 @@
+:root {
+  --initial-width: 5rem; /* Initial key width */
+  --initial-height: 5rem; /* Initial key height */
+}
+
 .keyboard {
   display: grid;
   /* These numbers came from a standard keyboard layout */
@@ -5,44 +10,26 @@
 }
 
 .key {
-  width: 7rem;
-  height: 7rem;
+  width: var(--initial-width);
+  height: var(--initial-height);
   display: flex;
   justify-content: center;
   align-items: center;
 
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 700;
   background-color: #f1f3f5;
 
-  border-radius: 7px;
-  box-shadow: inset 0 -2px 0 3px #adb5bd, 0 1.2rem 3.2rem rgba(0, 0, 0, 0.05);
+  border-radius: 0.7rem;
+  box-shadow: inset 0 -0.2rem 0 0.3rem #adb5bd,
+    0 1.2rem 3.2rem rgba(0, 0, 0, 0.05);
 
   transition: all 0.2s;
 }
 
-.key {
-  width: 7rem;
-  height: 7rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  font-size: 1.4rem;
-  font-weight: 700;
-  background-color: #f1f3f5;
-
-  border-radius: 7px;
-  box-shadow: inset 0 -2px 0 3px #adb5bd, 0 1.2rem 3.2rem rgba(0, 0, 0, 0.05);
-
-  transition: all 0.2s;
-}
 .key:hover {
   transform: scale(0.98);
-  box-shadow: inset 0 -1px 0 2px #adb5bd;
-}
-
-.svg {
+  box-shadow: inset 0 -0.1rem 0 0.2rem #adb5bd;
 }
 
 .region {
@@ -55,7 +42,15 @@
   grid-column: 1 / span 3;
 
   display: grid;
+  grid-template-columns: 1fr 4fr 4fr 4fr 3fr;
+
   border: 1px solid blue;
+}
+
+.key-group {
+  display: flex;
+  justify-content: end;
+  gap: 0.2rem;
 }
 
 /* contains Modifiers/Control (Ctrl|Alt|etc.) & Alpha (A-Z) keys */
@@ -71,8 +66,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  justify-items: center;
-  align-items: center;
 
   border: 1px solid green;
 }
@@ -84,8 +77,6 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  justify-items: center;
-  align-items: center;
 
   border: 1px solid brown;
 }
@@ -94,18 +85,6 @@
 /* NAVIGATION REGION KEYS */
 /**************************/
 
-.insert-key {
-}
-.home-key {
-}
-.pgup-key {
-}
-.delete-key {
-}
-.end-key {
-}
-.pgdn-key {
-}
 .arrowup-key {
   grid-column: 2;
   grid-row: 4;
@@ -133,46 +112,18 @@
 /* NUMPAD REGION KEYS */
 /**********************/
 
-.numlock-key {
-}
-.divison-key {
-}
-.multiplication-key {
-}
-.subtraction-key {
-}
-.numpad.numpad7-key {
-}
-.numpad8-key {
-}
-.numpad9-key {
-}
 .addition-key {
   grid-column: 4;
   grid-row: 2 / span 2;
-  height: 14.2rem;
+  height: calc((var(--initial-height) * 2) + 0.2rem);
 }
 
-.numpad4-key {
-}
-.numpad5-key {
-}
-.numpad6-key {
-}
-.numpad1-key {
-}
-.numpad2-key {
-}
-.numpad3-key {
-}
 .numpadEnter-key {
   grid-column: 4;
   grid-row: 4 / span 2;
-  height: 14.2rem;
+  height: calc((var(--initial-height) * 2) + 0.2rem);
 }
 .numpad0-key {
   grid-column: 1 / span 2;
-  width: 14.2rem;
-}
-.dot-key {
+  width: calc((var(--initial-width) * 2) + 0.2rem);
 }

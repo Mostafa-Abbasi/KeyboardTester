@@ -19,11 +19,38 @@
       <div class="keyboard">
         <!-- contains "ESC" & Function (F1-F12) & Top-Located Control (Prt Sc|Scrl lck|Pause) keys -->
         <section class="function region">
-          <div class="key">ESC</div>
+          <div class="key esc-key">ESC</div>
+          <div class="key-group">
+            <div class="key f1-key">F1</div>
+            <div class="key f2-key">F2</div>
+            <div class="key f3-key">F3</div>
+            <div class="key f4-key">F4</div>
+          </div>
+          <div class="key-group">
+            <div class="key f5-key">F5</div>
+            <div class="key f6-key">F6</div>
+            <div class="key f7-key">F7</div>
+            <div class="key f8-key">F8</div>
+          </div>
+          <div class="key-group">
+            <div class="key f9-key">F9</div>
+            <div class="key f10-key">F10</div>
+            <div class="key f11-key">F11</div>
+            <div class="key f12-key">F12</div>
+          </div>
+          <div class="key-group">
+            <div class="key printscreen-key">Prt Sc</div>
+            <div class="key scrolllock-key">Scr Lk</div>
+            <div class="key pause-key">Pause</div>
+          </div>
         </section>
 
         <!-- contains Modifiers/Control (Ctrl|Alt|etc.) & Alpha (A-Z) keys -->
-        <section class="typewriter region">typewriter-region</section>
+        <section class="typewriter region">
+          <!-- number row -->
+          <div class="first-row"></div>
+        </section>
+
         <!-- contains Navigation (PgUp|PgDn|etc.) & Arrow keys -->
         <section class="navigation region">
           <div class="key insert-key">Insert</div>
@@ -37,6 +64,7 @@
           <div class="key arrowdown-key"><span>&lt;</span></div>
           <div class="key arrowright-key"><span>&lt;</span></div>
         </section>
+
         <!-- contains Numpad Keys -->
         <section class="numpad region">
           <div class="key numlock-key">Num Lk</div>
@@ -55,7 +83,7 @@
           <div class="key numpad3-key">3</div>
           <div class="key numpadEnter-key">Enter</div>
           <div class="key numpad0-key">0</div>
-          <div class="key dot-key">&middot;</div>
+          <div class="key numpaddot-key">&middot;</div>
         </section>
       </div>
     </main>
