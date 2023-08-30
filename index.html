@@ -8,7 +8,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/segoe-fonts@1.0.1/segoe-fonts.min.css"
     />
-
     <link href="general.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
     <script defer src="script.js"></script>
@@ -19,7 +18,7 @@
       <div class="keyboard">
         <!-- contains "ESC" & Function (F1-F12) & Top-Located Control (Prt Sc|Scrl lck|Pause) keys -->
         <section class="function region">
-          <div class="key esc-key">ESC</div>
+          <div class="key escape-key">ESC</div>
           <div class="empty-space-between-keys"></div>
           <div class="key f1-key">F1</div>
           <div class="key f2-key">F2</div>
@@ -43,9 +42,9 @@
 
         <!-- contains Modifier/Control (Ctrl|Alt|etc.) & Alpha (A-Z) keys -->
         <section class="typewriter region">
-          <!-- number row -->
+          <!-- number row (`, 1, 2, etc.) -->
           <div class="first-row">
-            <div class="key tilde-key">~</div>
+            <div class="key tilde-key"><span>~</span> <span>`</span></div>
             <div class="key number1-key">1</div>
             <div class="key number2-key">2</div>
             <div class="key number3-key">3</div>
@@ -56,12 +55,16 @@
             <div class="key number8-key">8</div>
             <div class="key number9-key">9</div>
             <div class="key number0-key">0</div>
-            <div class="key minus-key">&minus;</div>
-            <div class="key equals-key">&equals;</div>
+            <div class="key minus-key key-with-sublegend">
+              <span>&minus;</span> <span>&dash;</span>
+            </div>
+            <div class="key equals-key key-with-sublegend">
+              <span>&plus;</span><span>&equals;</span>
+            </div>
             <div class="key backspace-key">Backspace</div>
           </div>
 
-          <!-- qwerty row -->
+          <!-- qwerty row (tab, \, q, w, etc.) -->
           <div class="second-row">
             <div class="key tab-key">Tab</div>
             <div class="key q-key">Q</div>
@@ -74,12 +77,18 @@
             <div class="key i-key">I</div>
             <div class="key o-key">O</div>
             <div class="key p-key">P</div>
-            <div class="key lbracket-key">[</div>
-            <div class="key rbracket-key">]</div>
-            <div class="key backslash-key">\</div>
+            <div class="key lbracket-key key-with-sublegend">
+              <span>&lbrace;</span> <span>&lbrack;</span>
+            </div>
+            <div class="key rbracket-key key-with-sublegend">
+              <span>&rbrace;</span> <span>&rbrack;</span>
+            </div>
+            <div class="key backslash-key key-with-sublegend">
+              <span>&vert;</span><span>&Backslash;</span>
+            </div>
           </div>
 
-          <!-- asdfg row -->
+          <!-- asdfg row (caps, enter, a, s, etc.) -->
           <div class="third-row">
             <div class="key caps-key">Caps</div>
             <div class="key a-key">A</div>
@@ -91,12 +100,16 @@
             <div class="key j-key">J</div>
             <div class="key k-key">K</div>
             <div class="key l-key">L</div>
-            <div class="key semicolon-key">:</div>
-            <div class="key apostrophe-key">"</div>
+            <div class="key semicolon-key key-with-sublegend">
+              <span>&colon;</span> <span>&semi;</span>
+            </div>
+            <div class="key apostrophe-key key-with-sublegend">
+              <span>&quot;</span> <span>&apos;</span>
+            </div>
             <div class="key enter-key">Enter</div>
           </div>
 
-          <!-- zxcvb row -->
+          <!-- zxcvb row (left and right shift, <, >, ?, etc.) -->
           <div class="fourth-row">
             <div class="key leftshift-key">Shift</div>
             <div class="key z-key">Z</div>
@@ -106,19 +119,24 @@
             <div class="key b-key">B</div>
             <div class="key n-key">N</div>
             <div class="key m-key">M</div>
-            <div class="key comma-key">&lt;</div>
-            <div class="key period-key">&period;</div>
-            <div class="key slash-key">/</div>
+            <div class="key comma-key key-with-sublegend">
+              <span>&lt;</span> <span>&comma;</span>
+            </div>
+            <div class="key period-key key-with-sublegend">
+              <span>&gt;</span> <span>&period;</span>
+            </div>
+            <div class="key slash-key key-with-sublegend">
+              <span>&quest;</span> <span>&sol;</span>
+            </div>
             <div class="key rightshift-key">Shift</div>
           </div>
 
-          <!-- bottom row containing space etc. -->
+          <!-- bottom row (ctrl, fn, win, alt, space, etc.) -->
           <div class="fifth-row">
             <div class="key leftcontrol-key">Ctrl</div>
             <div class="key windows-key">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4875 4875">
+              <svg viewBox="0 0 4875 4875">
                 <path
-                  fill="#888"
                   d="M0 0h2311v2310H0zm2564 0h2311v2310H2564zM0 2564h2311v2311H0zm2564 0h2311v2311H2564"
                 />
               </svg>
@@ -128,7 +146,7 @@
             <div class="key rightalt-key">Alt</div>
             <div class="key fn-key">Fn</div>
             <div class="key menu-key">
-              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 100 100">
                 <rect
                   x="10"
                   y="10"
@@ -136,15 +154,35 @@
                   height="80"
                   rx="2"
                   ry="2"
-                  stroke="#555"
-                  stroke-width="5"
-                  fill="none"
+                  stroke-width="7"
                 />
-                <g fill="#555">
-                  <rect x="25" y="30" width="50" height="5" rx="2" ry="2" />
-                  <rect x="25" y="47.5" width="50" height="5" rx="2" ry="2" />
-                  <rect x="25" y="65" width="50" height="5" rx="2" ry="2" />
-                </g>
+                <rect
+                  x="25"
+                  y="30"
+                  width="50"
+                  height="4"
+                  rx="2"
+                  ry="2"
+                  stroke-width="4"
+                />
+                <rect
+                  x="25"
+                  y="47.5"
+                  width="50"
+                  height="4"
+                  rx="2"
+                  ry="2"
+                  stroke-width="4"
+                />
+                <rect
+                  x="25"
+                  y="65"
+                  width="50"
+                  height="4"
+                  rx="2"
+                  ry="2"
+                  stroke-width="4"
+                />
               </svg>
             </div>
             <div class="key rightcontrol-key">Ctrl</div>
@@ -159,10 +197,34 @@
           <div class="key delete-key">Delete</div>
           <div class="key end-key">End</div>
           <div class="key pgdn-key">Pg Dn</div>
-          <div class="key arrowup-key"><span>&lt;</span></div>
-          <div class="key arrowleft-key">&lt;</div>
-          <div class="key arrowdown-key"><span>&lt;</span></div>
-          <div class="key arrowright-key"><span>&lt;</span></div>
+          <div class="key arrowup-key">
+            <svg enable-background="new 0 0 32 32" viewBox="0 0 32 32">
+              <path
+                d="M18.221,7.206l9.585,9.585c0.879,0.879,0.879,2.317,0,3.195l-0.8,0.801c-0.877,0.878-2.316,0.878-3.194,0  l-7.315-7.315l-7.315,7.315c-0.878,0.878-2.317,0.878-3.194,0l-0.8-0.801c-0.879-0.878-0.879-2.316,0-3.195l9.587-9.585  c0.471-0.472,1.103-0.682,1.723-0.647C17.115,6.524,17.748,6.734,18.221,7.206z"
+              />
+            </svg>
+          </div>
+          <div class="key arrowleft-key">
+            <svg enable-background="new 0 0 32 32" viewBox="0 0 32 32">
+              <path
+                d="M7.701,14.276l9.586-9.585c0.879-0.878,2.317-0.878,3.195,0l0.801,0.8c0.878,0.877,0.878,2.316,0,3.194  L13.968,16l7.315,7.315c0.878,0.878,0.878,2.317,0,3.194l-0.801,0.8c-0.878,0.879-2.316,0.879-3.195,0l-9.586-9.587  C7.229,17.252,7.02,16.62,7.054,16C7.02,15.38,7.229,14.748,7.701,14.276z"
+              />
+            </svg>
+          </div>
+          <div class="key arrowdown-key">
+            <svg enable-background="new 0 0 32 32" viewBox="0 0 32 32">
+              <path
+                d="M14.77,23.795L5.185,14.21c-0.879-0.879-0.879-2.317,0-3.195l0.8-0.801c0.877-0.878,2.316-0.878,3.194,0  l7.315,7.315l7.316-7.315c0.878-0.878,2.317-0.878,3.194,0l0.8,0.801c0.879,0.878,0.879,2.316,0,3.195l-9.587,9.585  c-0.471,0.472-1.104,0.682-1.723,0.647C15.875,24.477,15.243,24.267,14.77,23.795z"
+              />
+            </svg>
+          </div>
+          <div class="key arrowright-key">
+            <svg enable-background="new 0 0 32 32" viewBox="0 0 32 32">
+              <path
+                d="M24.291,14.276L14.705,4.69c-0.878-0.878-2.317-0.878-3.195,0l-0.8,0.8c-0.878,0.877-0.878,2.316,0,3.194  L18.024,16l-7.315,7.315c-0.878,0.878-0.878,2.317,0,3.194l0.8,0.8c0.878,0.879,2.317,0.879,3.195,0l9.586-9.587  c0.472-0.471,0.682-1.103,0.647-1.723C24.973,15.38,24.763,14.748,24.291,14.276z"
+              />
+            </svg>
+          </div>
         </section>
 
         <!-- contains Numpad Keys -->

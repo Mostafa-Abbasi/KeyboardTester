@@ -1,41 +1,68 @@
 :root {
-  --initial-width: 5rem; /* Initial key width */
-  --initial-height: 5rem; /* Initial key height */
+  /* example of a standard key: "W" Key on the KB */
+  --standard-key-width: 5rem; /* standard key width */
+  --standard-key-height: 5rem; /* standard key height */
+
+  --primary-gray: #555;
+
+  /* RETRO COLOR THEME */
+  --primary-color: #343a40;
+  --primary-color-shade--40: #1f2326;
+
+  --keyboard-keycaps-color: #f1f3f5;
+  --keyboard-keycaps-shadow-color: #adb5bd;
 }
 
 .keyboard {
   display: grid;
-  /* These numbers came from a standard keyboard layout */
-  grid-template-columns: 217fr 2fr 45fr 1fr 60fr;
-
+  /* These numbers came from a standard FULL-SIZE keyboard layout "+ SOME ROUNDING"
+  2fr is the whitespace between typewriter region and navigation region
+  1fr is the whitespace between navigation region and numpad region
+  function-region: 215+2+45 OR 262
+  typewriter-region: 215
+  navigation-region: 45
+  numpad-region: 60
+  */
+  grid-template-columns: 215fr 2fr 45fr 1fr 60fr;
   padding: 0.8rem;
   border-radius: 0.4rem;
-  background-color: #343a40;
-  box-shadow: 0 0.4rem 0 0.6rem #212529, 0 1.2rem 3.2rem rgba(0, 0, 0, 0.075);
+  background-color: var(--primary-color);
+  box-shadow: 0 0.4rem 0 0.6rem var(--primary-color-shade--40),
+    0 1.2rem 3.2rem rgba(0, 0, 0, 0.1);
 }
 
 .key {
-  width: var(--initial-width);
-  height: var(--initial-height);
+  width: var(--standard-key-width);
+  height: var(--standard-key-height);
+
   display: flex;
   justify-content: center;
   align-items: center;
 
-  font-size: 1.2rem;
-  font-weight: 600;
-  background-color: #f1f3f5;
-
   border-radius: 0.7rem;
-  box-shadow: inset 0 -0.2rem 0 0.3rem #adb5bd,
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  color: var(--primary-gray);
+  background-color: var(--keyboard-keycaps-color);
+  box-shadow: inset 0 -0.2rem 0 0.3rem var(--keyboard-keycaps-shadow-color),
     0 1.2rem 3.2rem rgba(0, 0, 0, 0.05);
+
+  cursor: pointer;
 
   transition: all 0.2s;
 }
 
 .key:hover {
   transform: scale(0.98);
-  box-shadow: inset 0 -0.1rem 0 0.2rem #adb5bd;
+  box-shadow: inset 0 -0.1rem 0 0.2rem var(--keyboard-keycaps-shadow-color);
 }
+
+/* __________________________________
+   ||||||||||||||||||||||||||||||||||
+   |||| GENERAL KB LAYOUT STYLES ||||
+   ||||||||||||||||||||||||||||||||||
+*/
 
 .region {
   padding: 0.5rem;
@@ -48,7 +75,7 @@
 
   display: grid;
   grid-template-columns:
-    14fr 15fr repeat(4, 14fr) 7fr repeat(4, 14fr) 7fr repeat(4, 14fr)
+    14fr 14fr repeat(4, 14fr) 8fr repeat(4, 14fr) 8fr repeat(4, 14fr)
     3fr repeat(3, 14fr);
 }
 
@@ -58,7 +85,7 @@
   display: grid;
 }
 
-.typewriter .first-row,
+.first-row,
 .second-row,
 .third-row,
 .fourth-row,
@@ -105,13 +132,27 @@
   grid-template-rows: repeat(5, 1fr);
 }
 
-/************************/
-/* FUNCTION REGION KEYS */
-/************************/
+/* _______________________________
+   |||||||||||||||||||||||||||||||
+   |||| KEY SPECIFIC STYLES ||||||
+   |||||||||||||||||||||||||||||||
+*/
 
 /**************************/
 /* TYPEWRITER REGION KEYS */
 /**************************/
+
+/* 
+  Note:
+  These multipliers (1.28, 1.5, 1.8, etc) aren't just magic numbers,
+  a keyboard has many keys with diffrent sizes and shapes. 
+  for example "windows" key compared to a standard key 
+  on the keyboard is "roughly" 1.28 bigger in width.
+  numbers are rounded but have enough accuracy 
+  to represent the right proportions.
+
+  **Adding 0.2/0.4/0.8rem is for accounting gaps that needs to be filled
+*/
 
 .leftcontrol-key,
 .windows-key,
@@ -120,43 +161,73 @@
 .fn-key,
 .menu-key,
 .rightcontrol-key {
-  width: calc((var(--initial-width) * 1.28) + 0.2rem);
+  width: calc((var(--standard-key-width) * 1.28) + 0.2rem);
 }
 
 .tab-key,
 .backslash-key {
-  width: calc((var(--initial-width) * 1.5) + 0.2rem);
+  width: calc((var(--standard-key-width) * 1.5) + 0.2rem);
 }
 
 .caps-key {
-  width: calc((var(--initial-width) * 1.8) + 0.2rem);
+  width: calc((var(--standard-key-width) * 1.8) + 0.2rem);
 }
 
 .backspace-key {
-  width: calc((var(--initial-width) * 2.02) + 0.2rem);
+  width: calc((var(--standard-key-width) * 2.02) + 0.2rem);
 }
 
 .enter-key,
 .leftshift-key {
-  width: calc((var(--initial-width) * 2.32) + 0.2rem);
+  width: calc((var(--standard-key-width) * 2.32) + 0.4rem);
 }
 
 .rightshift-key {
-  width: calc((var(--initial-width) * 2.82) + 0.2rem);
+  width: calc((var(--standard-key-width) * 2.82) + 0.4rem);
 }
 
 .space-key {
-  width: calc((var(--initial-width) * 6.36) + 0.2rem);
+  width: calc((var(--standard-key-width) * 6.36) + 0.8rem);
 }
 
 .windows-key svg {
   width: 2rem;
   height: 2rem;
+  fill: var(--primary-gray);
 }
 
 .menu-key svg {
   width: 2.6rem;
   height: 2.6rem;
+  stroke: var(--primary-gray);
+  fill: none;
+}
+
+.tilde-key {
+  flex-wrap: wrap;
+}
+
+.tilde-key span {
+  width: 100%;
+}
+
+.key-with-sublegend {
+  display: grid;
+  grid-template-rows: 1fr auto auto 1fr;
+  padding-top: 0.8rem;
+  gap: 0.1rem;
+}
+
+.key-with-sublegend span:nth-child(odd) {
+  width: 100%;
+  grid-row: 1;
+  text-align: center;
+}
+
+.key-with-sublegend span:nth-child(even) {
+  width: 100%;
+  grid-row: 2;
+  text-align: center;
 }
 
 .tilde-key,
@@ -175,6 +246,7 @@
   justify-content: right;
   padding-right: 1.6rem;
 }
+
 /**************************/
 /* NAVIGATION REGION KEYS */
 /**************************/
@@ -183,23 +255,20 @@
   grid-column: 2;
   grid-row: 4;
 }
-.arrowup-key span {
-  transform: rotate(90deg);
-}
-.arrowleft-key {
-  grid-row: 5;
-}
-.arrowdown-key {
-  grid-row: 5;
-}
-.arrowdown-key span {
-  transform: rotate(270deg);
-}
+
+.arrowleft-key,
+.arrowdown-key,
 .arrowright-key {
   grid-row: 5;
 }
-.arrowright-key span {
-  transform: rotate(180deg);
+
+.arrowup-key svg,
+.arrowleft-key svg,
+.arrowdown-key svg,
+.arrowright-key svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: var(--primary-gray);
 }
 
 /**********************/
@@ -209,15 +278,15 @@
 .addition-key {
   grid-column: 4;
   grid-row: 2 / span 2;
-  height: calc((var(--initial-height) * 2) + 0.2rem);
+  height: calc((var(--standard-key-height) * 2) + 0.2rem);
 }
 
 .numpadEnter-key {
   grid-column: 4;
   grid-row: 4 / span 2;
-  height: calc((var(--initial-height) * 2) + 0.2rem);
+  height: calc((var(--standard-key-height) * 2) + 0.2rem);
 }
 .numpad0-key {
   grid-column: 1 / span 2;
-  width: calc((var(--initial-width) * 2) + 0.2rem);
+  width: calc((var(--standard-key-width) * 2) + 0.2rem);
 }

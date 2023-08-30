@@ -6,50 +6,53 @@
 
 - Font weights
 Default: 400
-Medium: 500
-Semi-bold: 600
 Bold: 700
 
 - Line heights
 Default: 1
-Small: 1.05
-Medium: 1.2
-Paragraph default: 1.6
-Large: 1.8
 
 - Letter spacing
--0.5px
-0.75px
-
---- 02 COLORS
-
-- Primary: 
-- Tints:
-
-- Shades: 
+default: 1
 
 
-- Accents:
-- Greys
-
-#888
-#767676 (lightest grey allowed on #fff)
-#6f6f6f (lightest grey allowed on #fdf2e9)
-#555
-#333
-
---- 05 SHADOWS
-
-0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
-
---- 06 BORDER-RADIUS
-
-Default: 7px
-
---- 07 WHITESPACE
+--- 02 WHITESPACE
 
 - Spacing system (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+
+--- 04 BORDER-RADIUS
+
+Default: 7px
+small: 4px
+
+
+--- 03 COLORS
+
+- Primary: #343a40
+
+- Shades "Darker": 
+#2f343a (10%)
+#2a2e33 (20%)
+#1f2326 (40%)
+#15171a (60%)
+#0a0c0d (80%)
+
+- Tints "Lighter": 
+#484e53 (10%)
+#5d6166 (20%)
+#85898c (40%)
+#aeb0b3 (60%)
+#d6d8d9 (80%)
+
+- Accents: 
+#1c7ed6
+
+- Greys:
+#f1f3f5 (used on KB keycaps)
+#adb5bd (used on KB keycaps box-shadow)
+#555 (main - for letters)
+
 */
 
 * {
@@ -61,19 +64,20 @@ Default: 7px
 html {
   /* Percentage of user's browser font-size setting */
   font-size: 62.5%;
-  /* overflow-x: hidden; */
 }
 
 body {
+  /* Segoe UI is the official Font used in Microsoft products
+     including Windows and Surface lineup */
   font-family: 'Segoe UI', sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
 }
 
-/**************************/
+/******************************/
 /* GENRAL REUSABLE COMPONENTS */
-/**************************/
+/******************************/
 
 .container {
   /* 1220px */
