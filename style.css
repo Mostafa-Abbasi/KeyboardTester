@@ -1,63 +1,82 @@
 :root {
   /* example of a standard key: "W" Key on the KB */
-  --standard-key-width: 5rem; /* standard key width */
-  --standard-key-height: 5rem; /* standard key height */
+  --standard-key-size: 5rem; /* width & height */
 
-  --primary-gray: #555;
+  /* -------- RETRO COLOR THEME -------- */
 
-  /* RETRO COLOR THEME */
-  --primary-color: #343a40;
-  --primary-color-shade--40: #1f2326;
+  --color-primary: #343a40;
+  --color-primary-shade-40: #1f2326;
 
-  --keyboard-keycaps-color: #f1f3f5;
-  --keyboard-keycaps-shadow-color: #adb5bd;
+  --color-keycaps-bg: #f1f3f5;
+  --color-keycaps-legends: #555;
+  --color-keycaps-shadow: #adb5bd;
+
+  --color-keycaps-bg-pressed: #228be6;
+  --color-keycaps-legends-pressed: #e7f5ff;
+  --color-keycaps-shadow-pressed: #1864ab;
 }
 
 .keyboard {
-  display: grid;
-  /* These numbers came from a standard FULL-SIZE keyboard layout "+ SOME ROUNDING"
+  /* These numbers came from a standard FULL-SIZE keyboard layout "+SOME ROUNDING"
   2fr is the whitespace between typewriter region and navigation region
   1fr is the whitespace between navigation region and numpad region
   function-region: 215+2+45 OR 262
   typewriter-region: 215
   navigation-region: 45
-  numpad-region: 60
-  */
+  numpad-region: 60 */
+  display: grid;
   grid-template-columns: 215fr 2fr 45fr 1fr 60fr;
+
   padding: 0.8rem;
   border-radius: 0.4rem;
-  background-color: var(--primary-color);
-  box-shadow: 0 0.4rem 0 0.6rem var(--primary-color-shade--40),
+  background-color: var(--color-primary);
+  box-shadow: 0 0.4rem 0 0.6rem var(--color-primary-shade-40),
     0 1.2rem 3.2rem rgba(0, 0, 0, 0.1);
 }
 
 .key {
-  width: var(--standard-key-width);
-  height: var(--standard-key-height);
-
+  width: 100%;
+  height: var(--standard-key-size);
   display: flex;
   justify-content: center;
   align-items: center;
 
-  border-radius: 0.7rem;
+  border-radius: 0.6rem;
   font-size: 1.2rem;
   font-weight: 700;
 
-  color: var(--primary-gray);
-  background-color: var(--keyboard-keycaps-color);
-  box-shadow: inset 0 -0.2rem 0 0.3rem var(--keyboard-keycaps-shadow-color),
+  color: var(--color-keycaps-legends);
+  background-color: var(--color-keycaps-bg);
+  box-shadow: inset 0 -0.2rem 0 0.3rem var(--color-keycaps-shadow),
     0 1.2rem 3.2rem rgba(0, 0, 0, 0.05);
 
   cursor: pointer;
 
-  transition: all 0.2s;
+  transition: all 0.075s;
 }
 
-.key:hover {
+.key-pressed {
+  color: var(--color-keycaps-legends-pressed);
+  background-color: var(--color-keycaps-bg-pressed);
+  box-shadow: inset 0 -0.2rem 0 0.3rem var(--color-keycaps-shadow-pressed),
+    0 1.2rem 3.2rem rgba(0, 0, 0, 0.05);
+}
+
+.key:hover,
+.key-pressed:hover {
   transform: scale(0.98);
-  box-shadow: inset 0 -0.1rem 0 0.2rem var(--keyboard-keycaps-shadow-color);
+  box-shadow: inset 0 -0.1rem 0 0.2rem var(--color-keycaps-shadow);
 }
 
+.key-pressed:hover {
+  box-shadow: inset 0 -0.1rem 0 0.2rem var(--color-keycaps-shadow-pressed);
+}
+
+/* key pressing simulation class for using in js */
+.key-pressing-simulation {
+  transform: scale(0.98);
+  box-shadow: inset 0 -0.1rem 0 0.2rem var(--color-keycaps-shadow-pressed);
+}
 /* __________________________________
    ||||||||||||||||||||||||||||||||||
    |||| GENERAL KB LAYOUT STYLES ||||
@@ -66,7 +85,7 @@
 
 .region {
   padding: 0.5rem;
-  gap: 0.2rem;
+  gap: 0.25rem;
 }
 
 /* contains "ESC" & Function (F1-F12) & Top-Located Control (Prt Sc|Scrl lck|Pause) keys */
@@ -75,8 +94,8 @@
 
   display: grid;
   grid-template-columns:
-    14fr 14fr repeat(4, 14fr) 8fr repeat(4, 14fr) 8fr repeat(4, 14fr)
-    3fr repeat(3, 14fr);
+    70fr 70fr repeat(4, 70fr) 30.5fr repeat(4, 70fr) 30.5fr repeat(4, 70fr)
+    18fr repeat(3, 70fr);
 }
 
 /* contains Modifiers/Control (Ctrl|Alt|etc.) & Alpha (A-Z) keys */
@@ -91,7 +110,8 @@
 .fourth-row,
 .fifth-row {
   display: grid;
-  gap: 0.2rem;
+  justify-items: center;
+  gap: 0.25rem;
 }
 
 .first-row {
@@ -142,75 +162,7 @@
 /* TYPEWRITER REGION KEYS */
 /**************************/
 
-/* 
-  Note:
-  These multipliers (1.28, 1.5, 1.8, etc) aren't just magic numbers,
-  a keyboard has many keys with diffrent sizes and shapes. 
-  for example "windows" key compared to a standard key 
-  on the keyboard is "roughly" 1.28 bigger in width.
-  numbers are rounded but have enough accuracy 
-  to represent the right proportions.
-
-  **Adding 0.2/0.4/0.8rem is for accounting gaps that needs to be filled
-*/
-
-.leftcontrol-key,
-.windows-key,
-.leftalt-key,
-.rightalt-key,
-.fn-key,
-.menu-key,
-.rightcontrol-key {
-  width: calc((var(--standard-key-width) * 1.28) + 0.2rem);
-}
-
-.tab-key,
-.backslash-key {
-  width: calc((var(--standard-key-width) * 1.5) + 0.2rem);
-}
-
-.caps-key {
-  width: calc((var(--standard-key-width) * 1.8) + 0.2rem);
-}
-
-.backspace-key {
-  width: calc((var(--standard-key-width) * 2.02) + 0.2rem);
-}
-
-.enter-key,
-.leftshift-key {
-  width: calc((var(--standard-key-width) * 2.32) + 0.4rem);
-}
-
-.rightshift-key {
-  width: calc((var(--standard-key-width) * 2.82) + 0.4rem);
-}
-
-.space-key {
-  width: calc((var(--standard-key-width) * 6.36) + 0.8rem);
-}
-
-.windows-key svg {
-  width: 2rem;
-  height: 2rem;
-  fill: var(--primary-gray);
-}
-
-.menu-key svg {
-  width: 2.6rem;
-  height: 2.6rem;
-  stroke: var(--primary-gray);
-  fill: none;
-}
-
-.tilde-key {
-  flex-wrap: wrap;
-}
-
-.tilde-key span {
-  width: 100%;
-}
-
+/* styling keys with sublegends */
 .key-with-sublegend {
   display: grid;
   grid-template-rows: 1fr auto auto 1fr;
@@ -218,31 +170,55 @@
   gap: 0.1rem;
 }
 
-.key-with-sublegend span:nth-child(odd) {
+.key-with-sublegend span:nth-child(odd),
+.key-with-sublegend span:nth-child(even) {
   width: 100%;
-  grid-row: 1;
   text-align: center;
+  grid-row: 1;
 }
 
 .key-with-sublegend span:nth-child(even) {
-  width: 100%;
   grid-row: 2;
-  text-align: center;
 }
 
-.tilde-key,
-.tab-key,
-.caps-key,
-.leftshift-key,
-.leftcontrol-key {
+/* windows and context menu icons styling */
+.metaleft svg {
+  width: 2rem;
+  height: 2rem;
+  fill: var(--color-keycaps-legends);
+}
+.metaleft.key-pressed svg {
+  fill: var(--color-keycaps-legends-pressed);
+}
+
+.contextmenu svg {
+  width: 2.6rem;
+  height: 2.6rem;
+  stroke: var(--color-keycaps-legends);
+  fill: none;
+}
+
+.contextmenu.key-pressed svg {
+  width: 2.6rem;
+  height: 2.6rem;
+  stroke: var(--color-keycaps-legends-pressed);
+  fill: none;
+}
+
+/* side keys text aligning */
+.backquote,
+.tab,
+.capslock,
+.shiftleft,
+.controlleft {
   justify-content: left;
   padding-left: 1.6rem;
 }
 
-.backspace-key,
-.enter-key,
-.rightshift-key,
-.rightcontrol-key {
+.backspace,
+.enter,
+.shiftright,
+.controlright {
   justify-content: right;
   padding-right: 1.6rem;
 }
@@ -251,42 +227,48 @@
 /* NAVIGATION REGION KEYS */
 /**************************/
 
-.arrowup-key {
+.arrowup {
   grid-column: 2;
   grid-row: 4;
 }
 
-.arrowleft-key,
-.arrowdown-key,
-.arrowright-key {
+.arrowleft,
+.arrowdown,
+.arrowright {
   grid-row: 5;
 }
 
-.arrowup-key svg,
-.arrowleft-key svg,
-.arrowdown-key svg,
-.arrowright-key svg {
+.arrowup svg,
+.arrowleft svg,
+.arrowdown svg,
+.arrowright svg {
   width: 1.2rem;
   height: 1.2rem;
-  fill: var(--primary-gray);
+  fill: var(--colorkeycaps-legends);
+}
+
+.arrowup.key-pressed svg,
+.arrowleft.key-pressed svg,
+.arrowdown.key-pressed svg,
+.arrowright.key-pressed svg {
+  fill: var(--color-keycaps-legends-pressed);
 }
 
 /**********************/
 /* NUMPAD REGION KEYS */
 /**********************/
 
-.addition-key {
+.numpadadd {
   grid-column: 4;
   grid-row: 2 / span 2;
-  height: calc((var(--standard-key-height) * 2) + 0.2rem);
+  height: 100%;
 }
 
-.numpadEnter-key {
+.numpadenter {
   grid-column: 4;
   grid-row: 4 / span 2;
-  height: calc((var(--standard-key-height) * 2) + 0.2rem);
+  height: 100%;
 }
-.numpad0-key {
+.numpad0 {
   grid-column: 1 / span 2;
-  width: calc((var(--standard-key-width) * 2) + 0.2rem);
 }

@@ -29,7 +29,8 @@ small: 4px
 
 --- 03 COLORS
 
-- Primary: #343a40
+- Primary: 
+#343a40 
 
 - Shades "Darker": 
 #2f343a (10%)
@@ -46,12 +47,15 @@ small: 4px
 #d6d8d9 (80%)
 
 - Accents: 
-#1c7ed6
+#228be6 (used on KB keycaps background when pressed)
+#1864ab (used on KB keycaps box-shadow when pressed)
+
 
 - Greys:
-#f1f3f5 (used on KB keycaps)
+#f1f3f5 (used on KB keycaps background)
+#e7f5ff (used on KB keycaps legends when pressed)
 #adb5bd (used on KB keycaps box-shadow)
-#555 (main - for letters)
+#555555 (used on KB keycaps legends)
 
 */
 
@@ -63,7 +67,7 @@ small: 4px
 
 html {
   /* Percentage of user's browser font-size setting */
-  font-size: 62.5%;
+  font-size: 50%;
 }
 
 body {
