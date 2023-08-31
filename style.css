@@ -244,7 +244,7 @@
 .arrowright svg {
   width: 1.2rem;
   height: 1.2rem;
-  fill: var(--colorkeycaps-legends);
+  fill: var(--color-keycaps-legends);
 }
 
 .arrowup.key-pressed svg,
