@@ -1,0 +1,16 @@
+{
+  "folders": [
+	{
+		"path": "../WebDevChallenges"
+	},
+	{
+		"path": "../JavaScriptProjectFiles_Jonas"
+	},
+	{
+		"path": "."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "KeyboardTester"
+  }
+}
