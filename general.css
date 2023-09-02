@@ -67,7 +67,7 @@ small: 4px
 
 html {
   /* Percentage of user's browser font-size setting */
-  font-size: 50%;
+  font-size: 62.5%;
 }
 
 body {
@@ -83,8 +83,29 @@ body {
 /* GENRAL REUSABLE COMPONENTS */
 /******************************/
 
-.container {
-  /* 1220px */
-  max-width: 122rem;
-  margin: 10rem auto;
+.heading-primary {
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
+.paragraph {
+  font-size: 2rem;
+  color: #343a40;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+/******************************/
+/* GENRAL REUSABLE UTILLITIES */
+/******************************/
+
+.center-text {
+  text-align: center;
 }

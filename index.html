@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test Your Keyboard!</title>
+    <title>Online Keyboard Tester</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/segoe-fonts@1.0.1/segoe-fonts.min.css"
@@ -13,9 +13,29 @@
     <script defer src="script.js"></script>
   </head>
   <body>
-    <main class="container">
-      <div class="keyboard">
-        <!-- contains "ESC" & Function (F1-F12) & Top-Located Control (Prt Sc|Scrl lck|Pause) keys -->
+    <header>
+      <section class="intro">
+        <h1 class="heading-primary title center-text">
+          <span>Test Your Keyboard</span>
+        </h1>
+        <p class="paragraph description center-text">
+          This interactive tool is designed to help users identify and
+          troubleshoot any issues with their physical keyboard or simply explore
+          its layout
+        </p>
+        <div class="toggle-section">
+          <span class="full-size-layout">FULL</span>
+          <input type="checkbox" class="btn-toggle-layout" id="toggle" />
+          <label for="toggle" class="toggle-label">Toggle</label>
+          <span class="tkl-layout">TKL</span>
+        </div>
+
+        <!-- <button class="btn-toggle-layout">Make it TKL!</button> -->
+      </section>
+    </header>
+    <main>
+      <div class="keyboard full-size">
+        <!-- contains "ESC" & Function (F1-F12) -->
         <section class="function region">
           <div class="key escape">ESC</div>
           <div class="empty-space-between-keys" aria-hidden="true"></div>
@@ -33,7 +53,10 @@
           <div class="key f10">F10</div>
           <div class="key f11">F11</div>
           <div class="key f12">F12</div>
-          <div class="empty-space-between-keys" aria-hidden="true"></div>
+        </section>
+
+        <!-- contains Top-Located Control (Prt Sc|Scr lck|Pause) keys -->
+        <section class="system-control region">
           <div class="key printscreen">Prt Sc</div>
           <div class="key scrolllock">Scr Lk</div>
           <div class="key pause">Pause</div>
@@ -135,7 +158,8 @@
           <!-- bottom row (ctrl, fn, win, alt, space, etc.) -->
           <div class="fifth-row">
             <div class="key controlleft">Ctrl</div>
-            <div class="key metaleft">
+            <!-- Added OSLeft for firefox support -->
+            <div class="key metaleft osleft">
               <svg viewBox="0 0 4875 4875" aria-label="Windows key icon">
                 <path
                   d="M0 0h2311v2310H0zm2564 0h2311v2310H2564zM0 2564h2311v2311H0zm2564 0h2311v2311H2564"
@@ -144,7 +168,7 @@
             </div>
             <div class="key altleft">Alt</div>
             <div class="key space" aria-label="Space">
-              &UnderBar;&UnderBar;&UnderBar;
+              <span>&UnderBar;&UnderBar;&UnderBar;&UnderBar;</span>
             </div>
             <div class="key altright">Alt</div>
             <div class="key fn">Fn</div>

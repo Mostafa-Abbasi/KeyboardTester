@@ -1,6 +1,9 @@
 'use strict';
 
+// ------------------ HANDLING KEY PRESS ------------------
 const handleKeyPress = function (e) {
+  console.log(e);
+
   e.preventDefault();
   const keyElement = document.querySelector('.' + e.code.toLowerCase());
 
@@ -13,10 +16,45 @@ const handleKeyPress = function (e) {
   if (!keyElement.classList.contains('key-pressed'))
     keyElement.classList.add('key-pressed');
 
-  // 'Meta' or 'Windows key' is a bit tricky and only in
-  // this way we can reliably remove the class from it
-  if (e.key === 'Meta') keyElement.classList.remove('key-pressing-simulation');
+  // 'Meta' or 'OS' is a bit tricky and only in this way
+  // we can reliably remove the class from the element
+  if (e.key === 'Meta' || e.key === 'OS')
+    keyElement.classList.remove('key-pressing-simulation');
 };
 
 document.addEventListener('keydown', handleKeyPress);
 document.addEventListener('keyup', handleKeyPress);
+
+// -------------------- CHANGING LAYOUT --------------------
+const btnToggleLayout = document.querySelector('.btn-toggle-layout');
+const fullSizeLayout = document.querySelector('.full-size-layout');
+const TKLLayout = document.querySelector('.tkl-layout');
+
+const ToggleKeyboardLayout = function () {
+  const keyboard = document.querySelector('.keyboard');
+  const numpad = document.querySelector('.numpad');
+
+  if (btnToggleLayout.checked) {
+    numpad.classList.add('hidden');
+    setTimeout(function () {
+      keyboard.classList.remove('full-size');
+      keyboard.classList.add('tkl');
+      numpad.classList.add('w');
+    }, 150);
+  } else {
+    keyboard.classList.add('full-size');
+    keyboard.classList.remove('tkl');
+    numpad.classList.remove('hidden');
+    numpad.classList.remove('w');
+  }
+};
+
+btnToggleLayout.addEventListener('click', ToggleKeyboardLayout);
+fullSizeLayout.addEventListener('click', function () {
+  btnToggleLayout.checked = false;
+  ToggleKeyboardLayout();
+});
+TKLLayout.addEventListener('click', function () {
+  btnToggleLayout.checked = true;
+  ToggleKeyboardLayout();
+});

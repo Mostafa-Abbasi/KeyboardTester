@@ -3,35 +3,185 @@
   --standard-key-size: 5rem; /* width & height */
 
   /* -------- RETRO COLOR THEME -------- */
-
-  --color-primary: #343a40;
-  --color-primary-shade-40: #1f2326;
+  --color-primary: #3c3e4a;
+  --color-primary-shade-40: #303642;
 
   --color-keycaps-bg: #f1f3f5;
   --color-keycaps-legends: #555;
   --color-keycaps-shadow: #adb5bd;
 
-  --color-keycaps-bg-pressed: #228be6;
-  --color-keycaps-legends-pressed: #e7f5ff;
-  --color-keycaps-shadow-pressed: #1864ab;
+  --color-keycaps-bg-pressed: #a4a9b0;
+  --color-keycaps-legends-pressed: #2f3674;
+  --color-keycaps-shadow-pressed: #7f8489;
+
+  --color-bg: linear-gradient(
+    45deg,
+    #e9ecef,
+    #ced4da,
+    #adb5bd,
+    #eaebf1,
+    #c1c3d5
+  );
+
+  --color-bg-title: linear-gradient(
+    45deg,
+    #14181c,
+    #506070,
+    #2e3235,
+    #506070,
+    #2e3235,
+    #506070,
+    #14181c
+  );
+
+  --color-bg-toggle: linear-gradient(45deg, #4dabf7, #228be6, #1c70c0, #3c56da);
+
+  /* -------- GEN-Z COLOR THEME -------- */
+  /* --color-primary: #3c3e4a;
+  --color-primary-shade-40: #303642;
+
+  --color-keycaps-bg: #f1f3f5;
+  --color-keycaps-legends: #555;
+  --color-keycaps-shadow: #adb5bd;
+
+  --color-keycaps-bg-pressed: #a4a9b0;
+  --color-keycaps-legends-pressed: #2f3674;
+  --color-keycaps-shadow-pressed: #7f8489;
+
+  --color-bg: linear-gradient(
+    45deg,
+    #e9ecef,
+    #ced4da,
+    #adb5bd,
+    #eaebf1,
+    #c1c3d5
+  );
+
+  --color-bg-title: linear-gradient(
+    45deg,
+    #14181c,
+    #506070,
+    #2e3235,
+    #506070,
+    #2e3235,
+    #506070,
+    #14181c
+  );
+
+  --color-bg-toggle: linear-gradient(45deg, #4dabf7, #228be6, #1c70c0, #3c56da); */
 }
 
-.keyboard {
-  /* These numbers came from a standard FULL-SIZE keyboard layout "+SOME ROUNDING"
-  2fr is the whitespace between typewriter region and navigation region
-  1fr is the whitespace between navigation region and numpad region
-  function-region: 215+2+45 OR 262
-  typewriter-region: 215
-  navigation-region: 45
-  numpad-region: 60 */
-  display: grid;
-  grid-template-columns: 215fr 2fr 45fr 1fr 60fr;
+/* ------------------ BACKGROUND ------------------ */
 
+html {
+  min-height: 100vh;
+  background-image: var(--color-bg);
+}
+
+/* ------------------ HEADER ------------------ */
+
+.intro {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 4.8rem 3.2rem 3.2rem;
+}
+
+.title span {
+  background-image: var(--color-bg-title);
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.toggle-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-section span {
+  font-size: 2.4rem;
+  cursor: pointer;
+}
+
+/* toggle button styling */
+
+.btn-toggle-layout {
+  height: 0;
+  width: 0;
+
+  visibility: hidden;
+}
+
+.toggle-label {
+  position: relative;
+  display: block;
+  width: 8rem;
+  height: 4rem;
+  margin: 0 2rem;
+  border-radius: 4rem;
+  text-indent: -9999px;
+  background: var(--color-bg-toggle);
+  cursor: pointer;
+}
+
+.toggle-label:after {
+  content: '';
+  position: absolute;
+  top: 0.2rem;
+  left: 0.2rem;
+  border-radius: 3.6rem;
+  width: 3.6rem;
+  height: 3.6rem;
+  background: #fff;
+  transition: 0.2s;
+}
+
+input:checked + .toggle-label {
+  background: var(--color-bg-toggle);
+}
+
+input:checked + .toggle-label:after {
+  left: calc(100% - 0.2rem);
+  transform: translateX(-100%);
+}
+
+.toggle-label:active:after {
+  width: 5.2rem;
+}
+
+/* ------------------ KEYBOARD SECTION ------------------ */
+
+.keyboard {
+  display: grid;
+  margin: 0 auto;
   padding: 0.8rem;
   border-radius: 0.4rem;
   background-color: var(--color-primary);
   box-shadow: 0 0.4rem 0 0.6rem var(--color-primary-shade-40),
     0 1.2rem 3.2rem rgba(0, 0, 0, 0.1);
+
+  /* force GPU acceleration to reduce
+   potential subrendering issues */
+  transform: translateZ(0);
+
+  transition: all 0.25s;
+}
+
+.full-size {
+  grid-template-columns: 215fr 2fr 45fr 1fr 60fr;
+  max-width: 122rem;
+}
+
+.tkl {
+  /* whitespace in the tkl layout increased 
+  to 7fr for better region seperation */
+  grid-template-columns: 215fr 7fr 45fr;
+  max-width: 99rem;
 }
 
 .key {
@@ -52,7 +202,8 @@
 
   cursor: pointer;
 
-  transition: all 0.075s;
+  transition: color 0.075s, background-color 0.075s, box-shadow 0.075s,
+    transform 0.075s;
 }
 
 .key-pressed {
@@ -77,6 +228,7 @@
   transform: scale(0.98);
   box-shadow: inset 0 -0.1rem 0 0.2rem var(--color-keycaps-shadow-pressed);
 }
+
 /* __________________________________
    ||||||||||||||||||||||||||||||||||
    |||| GENERAL KB LAYOUT STYLES ||||
@@ -88,19 +240,25 @@
   gap: 0.25rem;
 }
 
-/* contains "ESC" & Function (F1-F12) & Top-Located Control (Prt Sc|Scrl lck|Pause) keys */
+/* contains "ESC" & Function (F1-F12) */
 .function {
-  grid-column: 1 / span 3;
-
   display: grid;
-  grid-template-columns:
-    70fr 70fr repeat(4, 70fr) 30.5fr repeat(4, 70fr) 30.5fr repeat(4, 70fr)
-    18fr repeat(3, 70fr);
+  grid-template-columns: 2fr 2fr repeat(4, 2fr) 1fr repeat(4, 2fr) 1fr repeat(
+      4,
+      2fr
+    );
+}
+
+/* contains Top-Located Control (Prt Sc|Scr lck|Pause) keys  */
+.system-control {
+  grid-column: 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 /* contains Modifiers/Control (Ctrl|Alt|etc.) & Alpha (A-Z) keys */
 .typewriter {
-  grid-column: 1 / 2;
+  grid-row: 2;
   display: grid;
 }
 
@@ -119,24 +277,24 @@
 }
 
 .second-row {
-  grid-template-columns: 21fr repeat(12, 14fr) 21fr;
+  grid-template-columns: 1.5fr repeat(12, 1fr) 1.5fr;
 }
 
 .third-row {
-  grid-template-columns: 25fr repeat(11, 14fr) 32fr;
+  grid-template-columns: 1.79fr repeat(11, 1fr) 2.29fr;
 }
 
 .fourth-row {
-  grid-template-columns: 32fr repeat(10, 14fr) 39fr;
+  grid-template-columns: 2.29fr repeat(10, 1fr) 2.79fr;
 }
 
 .fifth-row {
-  grid-template-columns: repeat(3, 18fr) 89fr repeat(4, 18fr);
+  grid-template-columns: repeat(3, 1.29fr) 6.36fr repeat(4, 1.29fr);
 }
 
 /* contains Navigation (PgUp|PgDn|etc.) & Arrow keys */
 .navigation {
-  grid-column: 3 / span 1;
+  grid-column: 3;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -145,7 +303,7 @@
 
 /* contains Numpad Keys */
 .numpad {
-  grid-column: 5 / span 1;
+  grid-column: 5;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -181,28 +339,32 @@
   grid-row: 2;
 }
 
-/* windows and context menu icons styling */
+/* windows and context menu icons */
 .metaleft svg {
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
   fill: var(--color-keycaps-legends);
 }
+
 .metaleft.key-pressed svg {
   fill: var(--color-keycaps-legends-pressed);
 }
 
 .contextmenu svg {
-  width: 2.6rem;
-  height: 2.6rem;
+  width: 2rem;
+  height: 2rem;
   stroke: var(--color-keycaps-legends);
   fill: none;
 }
 
 .contextmenu.key-pressed svg {
-  width: 2.6rem;
-  height: 2.6rem;
   stroke: var(--color-keycaps-legends-pressed);
-  fill: none;
+}
+
+/* spacebar legend */
+.space span {
+  transform: translateY(-1.6rem);
+  font-size: 1.6rem;
 }
 
 /* side keys text aligning */
@@ -271,4 +433,24 @@
 }
 .numpad0 {
   grid-column: 1 / span 2;
+}
+
+/* --------------------- */
+
+.numpad {
+  position: relative;
+  transition: all 0.15s;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+
+  transition: all 0.25;
+}
+
+.w {
+  width: 0;
+  padding: 0;
 }
