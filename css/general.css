@@ -23,7 +23,7 @@ default: 1
 
 --- 04 BORDER-RADIUS
 
-Default: 7px
+Default: 6px
 small: 4px
 
 
@@ -59,6 +59,52 @@ small: 4px
 
 */
 
+/***********/
+/* DEFAULT */
+/***********/
+
+:root {
+  --def-fs: 62.5%;
+  --ff: 'Segoe UI', sans-serif;
+  --color-primary: #343a40;
+  --color-primary-dark: #333;
+  --color-primary-light: #555;
+
+  /* -------- DEFAULT KEYBOARD THEME | RETRO -------- */
+  --color-keyboard: #3c3e4a;
+  --color-keyboard-border: #303642;
+
+  --color-keycaps-bg: #f1f3f5;
+  --color-keycaps-legends: #555;
+  --color-keycaps-shadow: #adb5bd;
+
+  --color-keycaps-bg-pressed: #a4a9b0;
+  --color-keycaps-legends-pressed: #2f3674;
+  --color-keycaps-shadow-pressed: #7f8489;
+
+  --color-bg: linear-gradient(
+    45deg,
+    #e9ecef,
+    #ced4da,
+    #adb5bd,
+    #eaebf1,
+    #c1c3d5
+  );
+
+  --color-bg-title: linear-gradient(
+    45deg,
+    #14181c,
+    #506070,
+    #2e3235,
+    #506070,
+    #2e3235,
+    #506070,
+    #14181c
+  );
+
+  --color-bg-toggle: linear-gradient(45deg, #4dabf7, #228be6, #1c70c0, #3c56da);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -67,16 +113,16 @@ small: 4px
 
 html {
   /* Percentage of user's browser font-size setting */
-  font-size: 62.5%;
+  font-size: var(--def-fs);
 }
 
 body {
   /* Segoe UI is the official Font used in Microsoft products
      including Windows and Surface lineup */
-  font-family: 'Segoe UI', sans-serif;
+  font-family: var(--ff);
   line-height: 1;
   font-weight: 400;
-  color: #555;
+  color: var(--color-primary);
 }
 
 /******************************/
@@ -85,11 +131,8 @@ body {
 
 .heading-primary {
   font-weight: 700;
-  color: #333;
+  color: var(--color-primary-dark);
   letter-spacing: -0.5px;
-}
-
-.heading-primary {
   font-size: 5.2rem;
   line-height: 1.05;
   margin-bottom: 3.2rem;
@@ -97,9 +140,22 @@ body {
 
 .paragraph {
   font-size: 2rem;
-  color: #343a40;
+  color: var(--color-primary);
   line-height: 1.6;
   margin-bottom: 4.8rem;
+}
+
+.link:link,
+.link:visited {
+  display: inline-block;
+  color: var(--color-primary);
+  text-decoration: none;
+  padding-top: 10px;
+}
+
+.link:hover,
+.link:active {
+  color: var(--color-primary-light);
 }
 
 /******************************/

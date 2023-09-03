@@ -3,13 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online Keyboard Tester</title>
+    <title>Online Keyboard Tester | Test Your Keyboard</title>
+    <meta
+      name="description"
+      content="Test your keyboard and troubleshoot issues with this interactive tool. Explore keyboard layouts and functionality."
+    />
+    <link rel="icon" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <!-- Open Graph (Facebook) Metadata -->
+    <meta
+      property="og:title"
+      content="Online Keyboard Tester | Test Your Keyboard"
+    />
+    <meta
+      property="og:description"
+      content="Test your keyboard and troubleshoot issues with this interactive tool. Explore keyboard layouts and functionality."
+    />
+    <meta property="og:url" content="https://example.com/keyboard-tester" />
+    <meta
+      property="og:image"
+      content="https://example.com/keyboard-tester.jpg"
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Online Keyboard Tester | Test Your Keyboard"
+    />
+    <meta
+      name="twitter:description"
+      content="Test your keyboard and troubleshoot issues with this interactive tool. Explore keyboard layouts and functionality."
+    />
+    <meta
+      name="twitter:image"
+      content="https://example.com/keyboard-tester.jpg"
+    />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/segoe-fonts@1.0.1/segoe-fonts.min.css"
     />
-    <link href="general.css" rel="stylesheet" />
-    <link href="style.css" rel="stylesheet" />
+    <link href="css/general.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
     <script defer src="script.js"></script>
   </head>
   <body>
@@ -26,7 +64,12 @@
         <div class="toggle-section">
           <span class="full-size-layout">FULL</span>
           <input type="checkbox" class="btn-toggle-layout" id="toggle" />
-          <label for="toggle" class="toggle-label">Toggle</label>
+          <label
+            for="toggle"
+            class="toggle-label"
+            aria-label="keyboard layout switch toggle"
+            >Toggle</label
+          >
           <span class="tkl-layout">TKL</span>
         </div>
 
@@ -159,8 +202,12 @@
           <div class="fifth-row">
             <div class="key controlleft">Ctrl</div>
             <!-- Added OSLeft for firefox support -->
-            <div class="key metaleft osleft">
-              <svg viewBox="0 0 4875 4875" aria-label="Windows key icon">
+            <div class="key metaleft osleft" aria-label="Windows key">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 4875 4875"
+                aria-label="Windows key icon"
+              >
                 <path
                   d="M0 0h2311v2310H0zm2564 0h2311v2310H2564zM0 2564h2311v2311H0zm2564 0h2311v2311H2564"
                 />
@@ -172,8 +219,12 @@
             </div>
             <div class="key altright">Alt</div>
             <div class="key fn">Fn</div>
-            <div class="key contextmenu">
-              <svg viewBox="0 0 100 100" aria-label="Context Menu key icon">
+            <div class="key contextmenu" aria-label="Context Menu key">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                aria-label="Context Menu key icon"
+              >
                 <rect
                   x="10"
                   y="10"
@@ -224,44 +275,48 @@
           <div class="key delete">Delete</div>
           <div class="key end">End</div>
           <div class="key pagedown">Pg Dn</div>
-          <div class="key arrowup">
+          <div class="key arrowup" aria-label="Up Arrow key">
             <svg
+              xmlns="http://www.w3.org/2000/svg"
               enable-background="new 0 0 32 32"
               viewBox="0 0 32 32"
-              aria-label="Arrow Up"
+              aria-label="Up Arrow"
             >
               <path
                 d="M18.221,7.206l9.585,9.585c0.879,0.879,0.879,2.317,0,3.195l-0.8,0.801c-0.877,0.878-2.316,0.878-3.194,0  l-7.315-7.315l-7.315,7.315c-0.878,0.878-2.317,0.878-3.194,0l-0.8-0.801c-0.879-0.878-0.879-2.316,0-3.195l9.587-9.585  c0.471-0.472,1.103-0.682,1.723-0.647C17.115,6.524,17.748,6.734,18.221,7.206z"
               />
             </svg>
           </div>
-          <div class="key arrowleft">
+          <div class="key arrowleft" aria-label="Left Arrow key">
             <svg
+              xmlns="http://www.w3.org/2000/svg"
               enable-background="new 0 0 32 32"
               viewBox="0 0 32 32"
-              aria-label="Arrow Left"
+              aria-label="Left Arrow"
             >
               <path
                 d="M7.701,14.276l9.586-9.585c0.879-0.878,2.317-0.878,3.195,0l0.801,0.8c0.878,0.877,0.878,2.316,0,3.194  L13.968,16l7.315,7.315c0.878,0.878,0.878,2.317,0,3.194l-0.801,0.8c-0.878,0.879-2.316,0.879-3.195,0l-9.586-9.587  C7.229,17.252,7.02,16.62,7.054,16C7.02,15.38,7.229,14.748,7.701,14.276z"
               />
             </svg>
           </div>
-          <div class="key arrowdown">
+          <div class="key arrowdown" aria-label="Down Arrow key">
             <svg
+              xmlns="http://www.w3.org/2000/svg"
               enable-background="new 0 0 32 32"
               viewBox="0 0 32 32"
-              aria-label="Arrow Down"
+              aria-label="Down Arrow"
             >
               <path
                 d="M14.77,23.795L5.185,14.21c-0.879-0.879-0.879-2.317,0-3.195l0.8-0.801c0.877-0.878,2.316-0.878,3.194,0  l7.315,7.315l7.316-7.315c0.878-0.878,2.317-0.878,3.194,0l0.8,0.801c0.879,0.878,0.879,2.316,0,3.195l-9.587,9.585  c-0.471,0.472-1.104,0.682-1.723,0.647C15.875,24.477,15.243,24.267,14.77,23.795z"
               />
             </svg>
           </div>
-          <div class="key arrowright">
+          <div class="key arrowright" aria-label="Right Arrow key">
             <svg
+              xmlns="http://www.w3.org/2000/svg"
               enable-background="new 0 0 32 32"
               viewBox="0 0 32 32"
-              aria-label="Arrow Right"
+              aria-label="Right Arrow"
             >
               <path
                 d="M24.291,14.276L14.705,4.69c-0.878-0.878-2.317-0.878-3.195,0l-0.8,0.8c-0.878,0.877-0.878,2.316,0,3.194  L18.024,16l-7.315,7.315c-0.878,0.878-0.878,2.317,0,3.194l0.8,0.8c0.878,0.879,2.317,0.879,3.195,0l9.586-9.587  c0.472-0.471,0.682-1.103,0.647-1.723C24.973,15.38,24.763,14.748,24.291,14.276z"
@@ -292,5 +347,38 @@
         </section>
       </div>
     </main>
+    <footer class="footer">
+      <p class="footer-text">
+        Copyright &copy; 2023 | Contact:
+        <a
+          class="link"
+          href="mailto:mostafaabbac@gmail.com"
+          aria-label="email address"
+          >mostafaabbac@gmail.com</a
+        >
+        |
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="20"
+          height="20"
+          viewBox="0 0 30 30"
+          aria-label="github icon"
+        >
+          <path
+            d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"
+          ></path>
+        </svg>
+        <a
+          class="link"
+          href="https://github.com/Mostafa-Abbasi/KeyboardTester"
+          target="_blank"
+          aria-label="github repository link"
+        >
+          <span>Repository</span>
+        </a>
+      </p>
+    </footer>
   </body>
 </html>

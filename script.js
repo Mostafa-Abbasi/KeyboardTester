@@ -35,17 +35,18 @@ const ToggleKeyboardLayout = function () {
   const numpad = document.querySelector('.numpad');
 
   if (btnToggleLayout.checked) {
-    numpad.classList.add('hidden');
+    numpad.classList.add('hidden--step1');
+    // timeout added for smooth transition between applying --step1 & --step2
     setTimeout(function () {
       keyboard.classList.remove('full-size');
       keyboard.classList.add('tkl');
-      numpad.classList.add('w');
+      numpad.classList.add('hidden--step2');
     }, 150);
   } else {
     keyboard.classList.add('full-size');
     keyboard.classList.remove('tkl');
-    numpad.classList.remove('hidden');
-    numpad.classList.remove('w');
+    numpad.classList.remove('hidden--step1');
+    numpad.classList.remove('hidden--step2');
   }
 };
 
