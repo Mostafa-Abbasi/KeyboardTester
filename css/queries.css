@@ -1,0 +1,81 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/**************************/
+/* BELOW 1392px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 87em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/**************************/
+/* BELOW 1264px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 79em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/**************************/
+/* BELOW 1056px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 66em) {
+  html {
+    font-size: 43.75%;
+  }
+}
+
+/**************************/
+/* BELOW 928px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 58em) {
+  html {
+    font-size: 37.5%;
+  }
+}
+
+/**************************/
+/* BELOW 784px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 49em) {
+  html {
+    font-size: 31.25%;
+  }
+}
+
+/**************************/
+/* BELOW 640px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 40em) {
+  html {
+    font-size: 25%;
+  }
+}
+
+/**************************/
+/* BELOW 512px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 32em) {
+  html {
+    font-size: 18.75%;
+  }
+}
+
+/**************************/
+/* BELOW 384px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 24em) {
+  html {
+    font-size: 12.5%;
+  }
+}

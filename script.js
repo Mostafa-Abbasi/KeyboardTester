@@ -31,11 +31,13 @@ const fullSizeLayout = document.querySelector('.full-size-layout');
 const TKLLayout = document.querySelector('.tkl-layout');
 
 const ToggleKeyboardLayout = function () {
+  const themeAndLayout = document.querySelector('.theme-and-layout');
   const keyboard = document.querySelector('.keyboard');
   const numpad = document.querySelector('.numpad');
 
   if (btnToggleLayout.checked) {
     numpad.classList.add('hidden--step1');
+    themeAndLayout.style.maxWidth = '97rem';
     // timeout added for smooth transition between applying --step1 & --step2
     setTimeout(function () {
       keyboard.classList.remove('full-size');
@@ -43,6 +45,7 @@ const ToggleKeyboardLayout = function () {
       numpad.classList.add('hidden--step2');
     }, 150);
   } else {
+    themeAndLayout.style.maxWidth = '120rem';
     keyboard.classList.add('full-size');
     keyboard.classList.remove('tkl');
     numpad.classList.remove('hidden--step1');

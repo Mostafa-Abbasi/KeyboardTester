@@ -48,6 +48,7 @@
     />
     <link href="css/general.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
+    <link href="css/queries.css" rel="stylesheet" />
     <script defer src="script.js"></script>
   </head>
   <body>
@@ -61,7 +62,13 @@
           troubleshoot any issues with their physical keyboard or simply explore
           its layout
         </p>
-        <div class="toggle-section">
+      </section>
+    </header>
+
+    <main>
+      <div class="theme-and-layout">
+        <div></div>
+        <section class="toggle-section">
           <span class="full-size-layout">FULL</span>
           <input type="checkbox" class="btn-toggle-layout" id="toggle" />
           <label
@@ -71,12 +78,24 @@
             >Toggle</label
           >
           <span class="tkl-layout">TKL</span>
-        </div>
+        </section>
 
-        <!-- <button class="btn-toggle-layout">Make it TKL!</button> -->
-      </section>
-    </header>
-    <main>
+        <section class="theme-section">
+          <div class="theme-retro">
+            <div class="theme-color"></div>
+            <div class="theme-color"></div>
+            <div class="theme-color"></div>
+            <div class="theme-color"></div>
+          </div>
+          <div class="theme-navy-blue">
+            <div class="theme-color"></div>
+            <div class="theme-color"></div>
+            <div class="theme-color"></div>
+            <div class="theme-color"></div>
+          </div>
+        </section>
+      </div>
+
       <div class="keyboard full-size">
         <!-- contains "ESC" & Function (F1-F12) -->
         <section class="function region">

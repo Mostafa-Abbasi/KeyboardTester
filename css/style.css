@@ -17,7 +17,7 @@ body {
 .intro {
   max-width: 130rem;
   margin: 0 auto;
-  padding: 4.8rem 3.2rem 3.2rem;
+  padding: 4.8rem 3.2rem 0rem;
 }
 
 .title span {
@@ -29,6 +29,66 @@ body {
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
+}
+
+.theme-and-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 117rem;
+  margin: 0 auto 2.4rem;
+  transition: all 0.25s;
+}
+
+.theme-section {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.theme-section > div {
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.theme-color {
+  width: 25%;
+}
+
+.theme-retro div:nth-child(1) {
+  background-color: #3c3e4a;
+}
+
+.theme-retro div:nth-child(2) {
+  background-color: #f8f9fa;
+}
+
+.theme-retro div:nth-child(3) {
+  background-color: #a4a9b0;
+}
+
+.theme-retro div:nth-child(4) {
+  background-color: #2f3674;
+}
+
+.theme-navy-blue div:nth-child(1) {
+  background-color: #3c3e4a;
+}
+
+.theme-navy-blue div:nth-child(2) {
+  background-color: #f8f9fa;
+}
+
+.theme-navy-blue div:nth-child(3) {
+  background-color: #a4a9b0;
+}
+
+.theme-navy-blue div:nth-child(4) {
+  background-color: #2f3674;
 }
 
 .toggle-section {
@@ -103,7 +163,7 @@ input:checked + .toggle-label:after {
    potential subrendering issues */
   transform: translateZ(0);
 
-  transition: all 0.25s;
+  transition: all 0.2s;
 }
 
 .full-size {
@@ -139,7 +199,7 @@ input:checked + .toggle-label:after {
   transition: all 0.075;
 }
 
-.key-pressed {
+.key.key-pressed {
   color: var(--color-keycaps-legends-pressed);
   background-color: var(--color-keycaps-bg-pressed);
   box-shadow: inset 0 -0.2rem 0 0.3rem var(--color-keycaps-shadow-pressed),
@@ -365,6 +425,50 @@ input:checked + .toggle-label:after {
   grid-column: 1 / span 2;
 }
 
+/**************************/
+/* KEYS WITH ACCENT COLOR */
+/**************************/
+
+.printscreen,
+.scrolllock,
+.pause,
+.backquote,
+.tab,
+.capslock,
+.shiftleft,
+.controlleft,
+.metaleft,
+.altleft,
+.space,
+.backspace,
+.backslash,
+.enter,
+.shiftright,
+.controlright,
+.contextmenu,
+.fn,
+.altright,
+.insert,
+.home,
+.pageup,
+.delete,
+.end,
+.pagedown {
+  background-color: var(--color-keycaps-bg-accent);
+  color: var(--color-keycaps-legends-accent);
+  box-shadow: inset 0 -0.2rem 0 0.3rem var(--color-keycaps-shadow-accent),
+    0 1.2rem 3.2rem rgba(0, 0, 0, 0.05);
+}
+
+.metaleft svg {
+  fill: var(--color-keycaps-legends-accent);
+}
+
+.contextmenu svg {
+  stroke: var(--color-keycaps-legends-accent);
+  fill: none;
+}
+
 /* _____________________________________
    |||||||||||||||||||||||||||||||||||||
    |||| Changing Layout Animation ||||||
@@ -387,7 +491,7 @@ STEPS FOR REMOVING NUMPAD FROM FULL-SIZE KEYBOARD: */
   /* 3) Hide it from screen readers */
   visibility: hidden;
 
-  transition: all 0.25;
+  transition: all 0.15;
 }
 
 .hidden--step2 {
@@ -411,8 +515,8 @@ STEPS FOR REMOVING NUMPAD FROM FULL-SIZE KEYBOARD: */
 }
 
 .footer-text svg {
-  width: 24;
-  height: 24;
+  width: 2.4rem;
+  height: 2.4rem;
   transform: translateY(0.5rem);
   fill: var(--color-primary);
 }
