@@ -1,0 +1,74 @@
+.theme--retro {
+  /* -------- DEFAULT KEYBOARD THEME | RETRO -------- */
+  /* - INSPIRED BY KBParadise VX80 Olivette Neo TKL - */
+  --key-border-radius: 0.6rem;
+
+  --box-shadow-keycaps: var(--box-shadow-keycaps-value)
+    var(--color-keycaps-shadow);
+  --box-shadow-keycaps-hover: var(--box-shadow-keycaps-hover-value)
+    var(--color-keycaps-shadow);
+
+  --box-shadow-keycaps-accent: var(--box-shadow-keycaps-value)
+    var(--color-keycaps-shadow-accent);
+  --box-shadow-keycaps-accent-hover: var(--box-shadow-keycaps-hover-value)
+    var(--color-keycaps-shadow-accent);
+
+  --box-shadow-keycaps-pressed: var(--box-shadow-keycaps-value)
+    var(--color-keycaps-shadow-pressed);
+  --box-shadow-keycaps-pressed-hover: var(--box-shadow-keycaps-hover-value)
+    var(--color-keycaps-shadow-pressed);
+
+  --color-keyboard: #3c3e4a;
+  --color-keyboard-border: #303642;
+
+  --color-keycaps-bg: #f8f9fa;
+  --color-keycaps-legends: #555;
+  --color-keycaps-shadow: #adb5bd;
+
+  --color-keycaps-bg-accent: #e2e3e6;
+  --color-keycaps-legends-accent: #555;
+  --color-keycaps-shadow-accent: #97a0a8;
+
+  --color-keycaps-bg-pressed: #a4a9b0;
+  --color-keycaps-legends-pressed: #2f3674;
+  --color-keycaps-shadow-pressed: #7f8489;
+}
+
+.theme--navy-blue {
+  /* -------- OPTIONAL KEYBOARD THEME | NAVY BLUE -------- */
+  /* ------- INSPIRED BY Keychron Q3 QMK NAVY BLUE ------- */
+  --key-border-radius: 1.2rem;
+
+  --box-shadow-keycaps-value: inset 0 -0.2rem 0 0.3rem;
+  --box-shadow-keycaps-hover-value: inset 0 -0.1rem 0 0.2rem;
+
+  --box-shadow-keycaps: var(--box-shadow-keycaps-value)
+    var(--color-keycaps-shadow);
+  --box-shadow-keycaps-hover: var(--box-shadow-keycaps-hover-value)
+    var(--color-keycaps-shadow);
+
+  --box-shadow-keycaps-accent: var(--box-shadow-keycaps-value)
+    var(--color-keycaps-shadow-accent);
+  --box-shadow-keycaps-accent-hover: var(--box-shadow-keycaps-hover-value)
+    var(--color-keycaps-shadow-accent);
+
+  --box-shadow-keycaps-pressed: var(--box-shadow-keycaps-value)
+    var(--color-keycaps-shadow-pressed);
+  --box-shadow-keycaps-pressed-hover: var(--box-shadow-keycaps-hover-value)
+    var(--color-keycaps-shadow-pressed);
+
+  --color-keyboard: #2a309c;
+  --color-keyboard-border: #21267e;
+
+  --color-keycaps-legends: #fff;
+  --color-keycaps-bg: #3d489b;
+  --color-keycaps-shadow: #1c2880;
+
+  --color-keycaps-legends-accent: #fff;
+  --color-keycaps-bg-accent: #4f71e4;
+  --color-keycaps-shadow-accent: #2e43ad;
+
+  --color-keycaps-legends-pressed: #2f3674;
+  --color-keycaps-bg-pressed: #a4a9b0;
+  --color-keycaps-shadow-pressed: #7f8489;
+}

@@ -67,11 +67,31 @@ small: 4px
   --def-fs: 62.5%;
   --ff: 'Segoe UI', sans-serif;
   --color-primary: #343a40;
-  --color-primary-dark: #333;
-  --color-primary-light: #555;
+  --color-primary-darker: #333;
+  --color-primary-lighter: #555;
 
   /* -------- DEFAULT KEYBOARD THEME | RETRO -------- */
   /* - INSPIRED BY KBParadise VX80 Olivette Neo TKL - */
+  --key-border-radius: 0.6rem;
+
+  --box-shadow-keycaps-value: inset 0 -0.2rem 0 0.3rem;
+  --box-shadow-keycaps-hover-value: inset 0 -0.1rem 0 0.2rem;
+
+  --box-shadow-keycaps: var(--box-shadow-keycaps-value)
+    var(--color-keycaps-shadow);
+  --box-shadow-keycaps-hover: var(--box-shadow-keycaps-hover-value)
+    var(--color-keycaps-shadow);
+
+  --box-shadow-keycaps-accent: var(--box-shadow-keycaps-value)
+    var(--color-keycaps-shadow-accent);
+  --box-shadow-keycaps-accent-hover: var(--box-shadow-keycaps-hover-value)
+    var(--color-keycaps-shadow-accent);
+
+  --box-shadow-keycaps-pressed: var(--box-shadow-keycaps-value)
+    var(--color-keycaps-shadow-pressed);
+  --box-shadow-keycaps-pressed-hover: var(--box-shadow-keycaps-hover-value)
+    var(--color-keycaps-shadow-pressed);
+
   --color-keyboard: #3c3e4a;
   --color-keyboard-border: #303642;
 
@@ -87,46 +107,7 @@ small: 4px
   --color-keycaps-legends-pressed: #2f3674;
   --color-keycaps-shadow-pressed: #7f8489;
 
-  --color-bg: linear-gradient(
-    45deg,
-    #e9ecef,
-    #ced4da,
-    #adb5bd,
-    #eaebf1,
-    #c1c3d5
-  );
-
-  --color-bg-title: linear-gradient(
-    45deg,
-    #14181c,
-    #506070,
-    #2e3235,
-    #506070,
-    #2e3235,
-    #506070,
-    #14181c
-  );
-
-  --color-bg-toggle: linear-gradient(45deg, #4dabf7, #228be6, #1c70c0, #3c56da);
-}
-
-.theme-navy-blue {
-  /* -------- OPTIONAL KEYBOARD THEME | NAVY BLUE -------- */
-  /* ------- INSPIRED BY Keychron Q3 QMK NAVY BLUE ------- */
-  --color-keyboard: #7293d1;
-  --color-keyboard-border: #080229;
-
-  --color-keycaps-bg: #f8f9fa;
-  --color-keycaps-legends: #555;
-  --color-keycaps-shadow: #adb5bd;
-
-  --color-keycaps-bg-accent: #e2e3e6;
-  --color-keycaps-legends-accent: #555;
-  --color-keycaps-shadow-accent: #97a0a8;
-
-  --color-keycaps-bg-pressed: #a4a9b0;
-  --color-keycaps-legends-pressed: #2f3674;
-  --color-keycaps-shadow-pressed: #7f8489;
+  /* styling background of elements */
 
   --color-bg: linear-gradient(
     45deg,
@@ -178,7 +159,7 @@ body {
 
 .heading-primary {
   font-weight: 700;
-  color: var(--color-primary-dark);
+  color: var(--color-primary-darker);
   letter-spacing: -0.5px;
   font-size: 5.2rem;
   line-height: 1.05;
@@ -202,7 +183,7 @@ body {
 
 .link:hover,
 .link:active {
-  color: var(--color-primary-light);
+  color: var(--color-primary-lighter);
 }
 
 /******************************/

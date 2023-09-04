@@ -20,10 +20,13 @@
       property="og:description"
       content="Test your keyboard and troubleshoot issues with this interactive tool. Explore keyboard layouts and functionality."
     />
-    <meta property="og:url" content="https://example.com/keyboard-tester" />
+    <meta
+      property="og:url"
+      content="https://mostafa-abbasi.github.io/KeyboardTester/"
+    />
     <meta
       property="og:image"
-      content="https://example.com/keyboard-tester.jpg"
+      content="https://mostafa-abbasi.github.io/KeyboardTester/img/favicon.png"
     />
     <meta property="og:type" content="website" />
 
@@ -39,7 +42,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://example.com/keyboard-tester.jpg"
+      content="https://mostafa-abbasi.github.io/KeyboardTester/img/favicon.png"
     />
 
     <link
@@ -47,6 +50,7 @@
       href="https://cdn.jsdelivr.net/npm/segoe-fonts@1.0.1/segoe-fonts.min.css"
     />
     <link href="css/general.css" rel="stylesheet" />
+    <link href="css/themes.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/queries.css" rel="stylesheet" />
     <script defer src="script.js"></script>
@@ -119,16 +123,16 @@
 
         <!-- contains Top-Located Control (Prt Sc|Scr lck|Pause) keys -->
         <section class="system-control region">
-          <div class="key printscreen">Prt Sc</div>
-          <div class="key scrolllock">Scr Lk</div>
-          <div class="key pause">Pause</div>
+          <div class="key printscreen key--accent-color">Prt Sc</div>
+          <div class="key scrolllock key--accent-color">Scr Lk</div>
+          <div class="key pause key--accent-color">Pause</div>
         </section>
 
         <!-- contains Modifier/Control (Ctrl|Alt|etc.) & Alpha (A-Z) keys -->
         <section class="typewriter region">
           <!-- number row (`, 1, 2, etc.) -->
           <div class="first-row">
-            <div class="key backquote key-with-sublegend">
+            <div class="key backquote key--sublegend key--accent-color">
               <span>~</span> <span>`</span>
             </div>
             <div class="key digit1">1</div>
@@ -141,18 +145,18 @@
             <div class="key digit8">8</div>
             <div class="key digit9">9</div>
             <div class="key digit0">0</div>
-            <div class="key minus key-with-sublegend">
+            <div class="key minus key--sublegend">
               <span>&minus;</span> <span>&dash;</span>
             </div>
-            <div class="key equal key-with-sublegend">
+            <div class="key equal key--sublegend">
               <span>&plus;</span><span>&equals;</span>
             </div>
-            <div class="key backspace">Backspace</div>
+            <div class="key backspace key--accent-color">Backspace</div>
           </div>
 
           <!-- qwerty row (tab, \, q, w, etc.) -->
           <div class="second-row">
-            <div class="key tab">Tab</div>
+            <div class="key tab key--accent-color">Tab</div>
             <div class="key keyq">Q</div>
             <div class="key keyw">W</div>
             <div class="key keye">E</div>
@@ -163,20 +167,20 @@
             <div class="key keyi">I</div>
             <div class="key keyo">O</div>
             <div class="key keyp">P</div>
-            <div class="key bracketleft key-with-sublegend">
+            <div class="key bracketleft key--sublegend">
               <span>&lbrace;</span> <span>&lbrack;</span>
             </div>
-            <div class="key bracketright key-with-sublegend">
+            <div class="key bracketright key--sublegend">
               <span>&rbrace;</span> <span>&rbrack;</span>
             </div>
-            <div class="key backslash key-with-sublegend">
+            <div class="key backslash key--sublegend key--accent-color">
               <span>&vert;</span><span>&Backslash;</span>
             </div>
           </div>
 
           <!-- asdfg row (caps, enter, a, s, etc.) -->
           <div class="third-row">
-            <div class="key capslock">Caps</div>
+            <div class="key capslock key--accent-color">Caps</div>
             <div class="key keya">A</div>
             <div class="key keys">S</div>
             <div class="key keyd">D</div>
@@ -186,18 +190,18 @@
             <div class="key keyj">J</div>
             <div class="key keyk">K</div>
             <div class="key keyl">L</div>
-            <div class="key semicolon key-with-sublegend">
+            <div class="key semicolon key--sublegend">
               <span>&colon;</span> <span>&semi;</span>
             </div>
-            <div class="key quote key-with-sublegend">
+            <div class="key quote key--sublegend">
               <span>&quot;</span> <span>&apos;</span>
             </div>
-            <div class="key enter">Enter</div>
+            <div class="key enter key--accent-color">Enter</div>
           </div>
 
           <!-- zxcvb row (left and right shift, <, >, ?, etc.) -->
           <div class="fourth-row">
-            <div class="key shiftleft">Shift</div>
+            <div class="key shiftleft key--accent-color">Shift</div>
             <div class="key keyz">Z</div>
             <div class="key keyx">X</div>
             <div class="key keyc">C</div>
@@ -205,23 +209,26 @@
             <div class="key keyb">B</div>
             <div class="key keyn">N</div>
             <div class="key keym">M</div>
-            <div class="key comma key-with-sublegend">
+            <div class="key comma key--sublegend">
               <span>&lt;</span> <span>&comma;</span>
             </div>
-            <div class="key period key-with-sublegend">
+            <div class="key period key--sublegend">
               <span>&gt;</span> <span>&period;</span>
             </div>
-            <div class="key slash key-with-sublegend">
+            <div class="key slash key--sublegend">
               <span>&quest;</span> <span>&sol;</span>
             </div>
-            <div class="key shiftright">Shift</div>
+            <div class="key shiftright key--accent-color">Shift</div>
           </div>
 
           <!-- bottom row (ctrl, fn, win, alt, space, etc.) -->
           <div class="fifth-row">
-            <div class="key controlleft">Ctrl</div>
+            <div class="key controlleft key--accent-color">Ctrl</div>
             <!-- Added OSLeft for firefox support -->
-            <div class="key metaleft osleft" aria-label="Windows key">
+            <div
+              class="key metaleft osleft key--accent-color"
+              aria-label="Windows key"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 4875 4875"
@@ -232,13 +239,16 @@
                 />
               </svg>
             </div>
-            <div class="key altleft">Alt</div>
-            <div class="key space" aria-label="Space">
+            <div class="key altleft key--accent-color">Alt</div>
+            <div class="key space key--accent-color" aria-label="Space">
               <span>&UnderBar;&UnderBar;&UnderBar;&UnderBar;</span>
             </div>
-            <div class="key altright">Alt</div>
-            <div class="key fn">Fn</div>
-            <div class="key contextmenu" aria-label="Context Menu key">
+            <div class="key altright key--accent-color">Alt</div>
+            <div class="key fn key--accent-color">Fn</div>
+            <div
+              class="key contextmenu key--accent-color"
+              aria-label="Context Menu key"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 100 100"
@@ -282,18 +292,18 @@
                 />
               </svg>
             </div>
-            <div class="key controlright">Ctrl</div>
+            <div class="key controlright key--accent-color">Ctrl</div>
           </div>
         </section>
 
         <!-- contains Navigation (PgUp|PgDn|etc.) & Arrow keys -->
         <section class="navigation region">
-          <div class="key insert">Insert</div>
-          <div class="key home">Home</div>
-          <div class="key pageup">Pg Up</div>
-          <div class="key delete">Delete</div>
-          <div class="key end">End</div>
-          <div class="key pagedown">Pg Dn</div>
+          <div class="key insert key--accent-color">Insert</div>
+          <div class="key home key--accent-color">Home</div>
+          <div class="key pageup key--accent-color">Pg Up</div>
+          <div class="key delete key--accent-color">Delete</div>
+          <div class="key end key--accent-color">End</div>
+          <div class="key pagedown key--accent-color">Pg Dn</div>
           <div class="key arrowup" aria-label="Up Arrow key">
             <svg
               xmlns="http://www.w3.org/2000/svg"

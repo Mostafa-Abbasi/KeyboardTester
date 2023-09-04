@@ -13,8 +13,8 @@ const handleKeyPress = function (e) {
     keyElement.classList.remove('key-pressing-simulation');
   }
 
-  if (!keyElement.classList.contains('key-pressed'))
-    keyElement.classList.add('key-pressed');
+  if (!keyElement.classList.contains('key--pressed'))
+    keyElement.classList.add('key--pressed');
 
   // 'Meta' or 'OS' is a bit tricky and only in this way
   // we can reliably remove the class from the element
@@ -62,3 +62,7 @@ TKLLayout.addEventListener('click', function () {
   btnToggleLayout.checked = true;
   ToggleKeyboardLayout();
 });
+
+// -------------------- THEME MANIPULATION --------------------
+
+document.body.classList.add('theme--navy-blue');

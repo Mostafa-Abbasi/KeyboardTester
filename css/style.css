@@ -185,38 +185,47 @@ input:checked + .toggle-label:after {
   justify-content: center;
   align-items: center;
 
-  border-radius: 0.6rem;
+  border-radius: var(--key-border-radius);
   font-size: 1.2rem;
   font-weight: 700;
 
   color: var(--color-keycaps-legends);
   background-color: var(--color-keycaps-bg);
-  box-shadow: inset 0 -0.2rem 0 0.3rem var(--color-keycaps-shadow),
-    0 1.2rem 3.2rem rgba(0, 0, 0, 0.05);
-
+  box-shadow: var(--box-shadow-keycaps);
   cursor: pointer;
 
   transition: all 0.075;
 }
 
-.key.key-pressed {
+.key--accent-color {
+  color: var(--color-keycaps-legends-accent);
+  background-color: var(--color-keycaps-bg-accent);
+  box-shadow: var(--box-shadow-keycaps-accent);
+}
+
+/* making specificity higher by adding .key */
+.key.key--pressed {
   color: var(--color-keycaps-legends-pressed);
   background-color: var(--color-keycaps-bg-pressed);
-  box-shadow: inset 0 -0.2rem 0 0.3rem var(--color-keycaps-shadow-pressed),
-    0 1.2rem 3.2rem rgba(0, 0, 0, 0.05);
+  box-shadow: var(--box-shadow-keycaps-pressed);
 }
 
 /* key pressing simulation class is for using in js */
 .key:hover,
-.key-pressed:hover,
+.key--accent-color:hover,
+.key--pressed:hover,
 .key-pressing-simulation {
   transform: scale(0.98);
-  box-shadow: inset 0 -0.1rem 0 0.2rem var(--color-keycaps-shadow);
+  box-shadow: var(--box-shadow-keycaps-hover);
 }
 
-.key-pressed:hover,
+.key--accent-color:hover {
+  box-shadow: var(--box-shadow-keycaps-accent-hover);
+}
+
+.key--pressed:hover,
 .key-pressing-simulation {
-  box-shadow: inset 0 -0.1rem 0 0.2rem var(--color-keycaps-shadow-pressed);
+  box-shadow: var(--box-shadow-keycaps-pressed-hover);
 }
 
 /* __________________________________
@@ -311,32 +320,37 @@ input:checked + .toggle-label:after {
 /**************************/
 
 /* styling keys with sublegends */
-.key-with-sublegend {
+.key--sublegend {
   display: grid;
   grid-template-rows: 1fr auto auto 1fr;
   padding-top: 0.8rem;
   gap: 0.1rem;
 }
 
-.key-with-sublegend span:nth-child(odd),
-.key-with-sublegend span:nth-child(even) {
+.key--sublegend span:nth-child(odd),
+.key--sublegend span:nth-child(even) {
   width: 100%;
   text-align: center;
   grid-row: 1;
 }
 
-.key-with-sublegend span:nth-child(even) {
+.key--sublegend span:nth-child(even) {
   grid-row: 2;
 }
 
 /* windows and context menu icons */
+
 .metaleft svg {
   width: 1.8rem;
   height: 1.8rem;
   fill: var(--color-keycaps-legends);
 }
 
-.metaleft.key-pressed svg {
+.metaleft .key--accent svg {
+  fill: var(--color-keycaps-legends-accent);
+}
+
+.metaleft.key--pressed svg {
   fill: var(--color-keycaps-legends-pressed);
 }
 
@@ -347,7 +361,11 @@ input:checked + .toggle-label:after {
   fill: none;
 }
 
-.contextmenu.key-pressed svg {
+.contextmenu .key--accent svg {
+  stroke: var(--color-keycaps-legends-accent);
+}
+
+.contextmenu.key--pressed svg {
   stroke: var(--color-keycaps-legends-pressed);
 }
 
@@ -399,10 +417,10 @@ input:checked + .toggle-label:after {
   fill: var(--color-keycaps-legends);
 }
 
-.arrowup.key-pressed svg,
-.arrowleft.key-pressed svg,
-.arrowdown.key-pressed svg,
-.arrowright.key-pressed svg {
+.arrowup.key--pressed svg,
+.arrowleft.key--pressed svg,
+.arrowdown.key--pressed svg,
+.arrowright.key--pressed svg {
   fill: var(--color-keycaps-legends-pressed);
 }
 
@@ -423,50 +441,6 @@ input:checked + .toggle-label:after {
 }
 .numpad0 {
   grid-column: 1 / span 2;
-}
-
-/**************************/
-/* KEYS WITH ACCENT COLOR */
-/**************************/
-
-.printscreen,
-.scrolllock,
-.pause,
-.backquote,
-.tab,
-.capslock,
-.shiftleft,
-.controlleft,
-.metaleft,
-.altleft,
-.space,
-.backspace,
-.backslash,
-.enter,
-.shiftright,
-.controlright,
-.contextmenu,
-.fn,
-.altright,
-.insert,
-.home,
-.pageup,
-.delete,
-.end,
-.pagedown {
-  background-color: var(--color-keycaps-bg-accent);
-  color: var(--color-keycaps-legends-accent);
-  box-shadow: inset 0 -0.2rem 0 0.3rem var(--color-keycaps-shadow-accent),
-    0 1.2rem 3.2rem rgba(0, 0, 0, 0.05);
-}
-
-.metaleft svg {
-  fill: var(--color-keycaps-legends-accent);
-}
-
-.contextmenu svg {
-  stroke: var(--color-keycaps-legends-accent);
-  fill: none;
 }
 
 /* _____________________________________
