@@ -26,12 +26,13 @@ Just head over to __[Online Keyboard Tester Website](https://mostafa-abbasi.gith
 
 ## Who is this Tool For? 🎯
 
-The Online Keyboard Tester is designed for a wide range of users who rely on keyboards for various purposes. It caters to:
+This tool is designed for a wide range of users who rely on keyboards for various purposes. It caters to:
 
-- **Programmers and Developers**: Ensure all keys are functioning correctly for efficient coding.
-- **Gamers**: Verify the responsiveness of your gaming keyboard for seamless gameplay.
-- **Keyboard Enthusiasts**: Perfect for those who want to confirm the reliability of their beloved keyboards.
-- **Users with Standard Windows Layouts**: Optimized for standard Windows keyboard layouts.
+- **New Keyboard Owners**: Essential for testing both new and pre-owned keyboards or laptops to ensure optimal functionality.
+- **Keyboard Enthusiasts**: Ideal for confirming the performance of customized keyboards after an extensive modification process.
+- **Gamers**: Perfect for verifying the responsiveness of gaming keyboards and assessing the simultaneous key press capability.
+- **Programmers and Developers**: Crucial for guaranteeing that all keys operate flawlessly, enabling efficient coding.
+- **Standard Windows Layout Users**: Specifically optimized for those using standard Windows keyboard configurations.
 
 While it may work with other layouts, including non-standard and Apple Mac layouts, please note that the tool is primarily tailored for Windows keyboards.
 <br/><br/>
