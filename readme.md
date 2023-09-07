@@ -67,7 +67,7 @@ If you encounter any issues while using the Online Keyboard Tester, check out th
    - A: Nope, this tool is more into the basic keyboard stuff. It will not recognize touchpad, macro, media, etc.
      
 **Q: Can I use this tool on mobile or tablet devices perfectly fine?**
-  - A: Designed for desktop use, but can work on mobile/tablet with an external keyboard and inferior visuals.
+  - A: Designed for desktop usage, but can work on mobile/tablet with an external keyboard and inferior visuals.
 
 **Q: No visual feedback after 'fn' key press. What to do now?**
    - A: 'fn' key is a hardware key and is not registered by browser key events. It can't be tested using this tool.
@@ -76,10 +76,10 @@ If you encounter any issues while using the Online Keyboard Tester, check out th
    - A: It might be a hardware issue. Clean affected keys or refer to your keyboard's manual for troubleshooting.
   
 **Q: Works for non-standard layouts, like Apple Mac?**
-   - A: Primarily designed for standard QWERTY Windows layouts. May work with others, But not optimized.
+   - A: Primarily designed for standard QWERTY Windows/Linux layouts. May work with others, But not optimized.
 
 **Q: Recommended browsers for this web app?**
-   - A: Tested on Firefox, Edge and chrome. For the slickest experience, latest Chrome version.
+   - A: Tested on Firefox, Edge and chrome. For the slickest experience, latest Chrome version is recommended.
      
 <br/><br/>
 
