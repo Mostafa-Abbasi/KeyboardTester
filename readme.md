@@ -28,11 +28,11 @@ Just head over to __[Online Keyboard Tester Website](https://mostafa-abbasi.gith
 
 This tool is designed for a wide range of users who rely on keyboards for various purposes. It caters to:
 
-- **New Keyboard Owners**: Essential for testing both new and pre-owned keyboards or laptops to ensure optimal functionality.
-- **Keyboard Enthusiasts**: Ideal for confirming the performance of customized keyboards after an extensive modification process.
-- **Gamers**: Perfect for verifying the responsiveness of gaming keyboards and assessing the simultaneous key press capability.
-- **Programmers and Developers**: Crucial for guaranteeing that all keys operate flawlessly, enabling efficient coding.
-- **Standard Windows Layout Users**: Specifically optimized for those using standard Windows keyboard configurations.
+- **New Keyboard Owners**: Test your fresh or pre-loved keyboards or laptops for peak performance
+- **Keyboard Geeks**: Ensure your personalized keyboards rock after all those fancy modifications
+- **fellow Gamers**: Check your keyboard's speed and simultaneous key pressing with this tool
+- **Programmers**: Ensure every keystroke is flawless for smooth coding sessions
+- **Standard Windows Layout Users**:  If you roll with the standard Windows layout, this one's fine-tuned just for you!
 
 While it may work with other layouts, including non-standard and Apple Mac layouts, please note that the tool is primarily tailored for Windows keyboards.
 <br/><br/>
