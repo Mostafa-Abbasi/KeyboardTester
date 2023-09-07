@@ -64,13 +64,13 @@ If you encounter any issues while using the Online Keyboard Tester, check out th
 <br/><br/>
 
 **Q: Will this tool handle touchpad keys, macros, media keys and etc.?**
-   - A: Nope, this tool is more into the basic keyboard stuff. It won't recognize touchpad, macro, media, or other fancy special keys.
+   - A: Nope, this tool is more into the basic keyboard stuff. It won't recognize touchpad, macro, media, etc.
      
 **Q: Can I use this tool on mobile or tablet devices perfectly fine?**
-  - A: Designed for desktop use, but can work on mobile/tablet with an external keyboard. Visual experience may be suboptimal.
+  - A: Designed for desktop use, but can work on mobile/tablet with an external keyboard and inferior visuals.
 
 **Q: No visual feedback after 'fn' key press. What to do now?**
-   - A: Unfortunately, the 'fn' key is a hardware key and is not registered by browser events. It can't be tested using this tool.
+   - A: 'fn' key is a hardware key and is not registered by browser events. It can't be tested using this tool.
   
 **Q: Certain keys doesn't register. Any recommendations?**
    - A: It might be a hardware issue. Clean affected keys or refer to your keyboard's manual for troubleshooting.
