@@ -65,4 +65,32 @@ TKLLayout.addEventListener('click', function () {
 
 // -------------------- THEME MANIPULATION --------------------
 
-document.body.classList.add('theme--navy-blue');
+const themes = {
+  retro: document.querySelector('.retro'),
+  navyBlue: document.querySelector('.navy-blue'),
+};
+
+for (const theme in themes) {
+  themes[theme].addEventListener('click', function () {
+    changeTheme(themes[theme].className);
+  });
+}
+
+const initializeTheme = () => {
+  const savedTheme = localStorage.getItem('currentTheme');
+  if (savedTheme) changeTheme(savedTheme);
+};
+
+const changeTheme = function (themeName) {
+  // naming needs to be changed so we can access
+  // themes that exist in themes.css
+  const themeCSS = 'theme--' + themeName;
+
+  document.body.classList.remove(
+    'theme--' + localStorage.getItem('currentTheme')
+  );
+  document.body.classList.add(themeCSS);
+  localStorage.setItem('currentTheme', themeName);
+};
+
+initializeTheme();

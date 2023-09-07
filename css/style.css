@@ -34,61 +34,9 @@ body {
 .theme-and-layout {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  max-width: 117rem;
+  max-width: 120rem;
   margin: 0 auto 2.4rem;
   transition: all 0.25s;
-}
-
-.theme-section {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  gap: 2rem;
-}
-
-.theme-section > div {
-  display: flex;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.theme-color {
-  width: 25%;
-}
-
-.theme-retro div:nth-child(1) {
-  background-color: #3c3e4a;
-}
-
-.theme-retro div:nth-child(2) {
-  background-color: #f8f9fa;
-}
-
-.theme-retro div:nth-child(3) {
-  background-color: #a4a9b0;
-}
-
-.theme-retro div:nth-child(4) {
-  background-color: #2f3674;
-}
-
-.theme-navy-blue div:nth-child(1) {
-  background-color: #3c3e4a;
-}
-
-.theme-navy-blue div:nth-child(2) {
-  background-color: #f8f9fa;
-}
-
-.theme-navy-blue div:nth-child(3) {
-  background-color: #a4a9b0;
-}
-
-.theme-navy-blue div:nth-child(4) {
-  background-color: #2f3674;
 }
 
 .toggle-section {
@@ -146,6 +94,60 @@ input:checked + .toggle-label:after {
 
 .toggle-label:active:after {
   width: 5.2rem;
+}
+
+.theme-section {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.theme-section > div {
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.theme-color {
+  width: 25%;
+}
+
+/* retro theme */
+.retro div:nth-child(1) {
+  background-color: #3c3e4a;
+}
+
+.retro div:nth-child(2) {
+  background-color: #f8f9fa;
+}
+
+.retro div:nth-child(3) {
+  background-color: #a4a9b0;
+}
+
+.retro div:nth-child(4) {
+  background-color: #2f3674;
+}
+
+/* navy-blue */
+.navy-blue div:nth-child(1) {
+  background-color: #2a309c;
+}
+
+.navy-blue div:nth-child(2) {
+  background-color: #3d489b;
+}
+
+.navy-blue div:nth-child(3) {
+  background-color: #a4a9b0;
+}
+
+.navy-blue div:nth-child(4) {
+  background-color: #2f3674;
 }
 
 /* ------------------ KEYBOARD SECTION ------------------ */

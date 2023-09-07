@@ -95,16 +95,16 @@ small: 4px
   --color-keyboard: #3c3e4a;
   --color-keyboard-border: #303642;
 
-  --color-keycaps-bg: #f8f9fa;
   --color-keycaps-legends: #555;
+  --color-keycaps-bg: #f8f9fa;
   --color-keycaps-shadow: #adb5bd;
 
-  --color-keycaps-bg-accent: #e2e3e6;
   --color-keycaps-legends-accent: #555;
+  --color-keycaps-bg-accent: #e2e3e6;
   --color-keycaps-shadow-accent: #97a0a8;
 
-  --color-keycaps-bg-pressed: #a4a9b0;
   --color-keycaps-legends-pressed: #2f3674;
+  --color-keycaps-bg-pressed: #a4a9b0;
   --color-keycaps-shadow-pressed: #7f8489;
 
   /* styling background of elements */
