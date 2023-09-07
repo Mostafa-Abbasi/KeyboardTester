@@ -27,7 +27,7 @@ Default: 6px
 small: 4px
 
 
---- 03 COLORS
+--- 03 COLORS (List is not complete)
 
 - Primary: 
 #343a40 
@@ -47,15 +47,16 @@ small: 4px
 #d6d8d9 (80%)
 
 - Accents: 
-#228be6 (used on KB keycaps background when pressed)
-#1864ab (used on KB keycaps box-shadow when pressed)
+#228be6 
+#3c56da
+#2a309c
 
 
 - Greys:
-#f1f3f5 (used on KB keycaps background)
-#e7f5ff (used on KB keycaps legends when pressed)
-#adb5bd (used on KB keycaps box-shadow)
-#555555 (used on KB keycaps legends)
+#f1f3f5 
+#e7f5ff 
+#adb5bd 
+#555555 
 
 */
 
@@ -186,9 +187,9 @@ body {
   color: var(--color-primary-lighter);
 }
 
-/******************************/
-/* GENRAL REUSABLE UTILLITIES */
-/******************************/
+/***************************/
+/* HELPER/SETTINGS CLASSES */
+/***************************/
 
 .center-text {
   text-align: center;

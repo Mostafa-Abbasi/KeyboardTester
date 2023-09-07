@@ -1,6 +1,39 @@
 'use strict';
 
+// -------------------- THEME MANIPULATION --------------------
+
+const themes = {
+  retro: document.querySelector('.retro'),
+  navyBlue: document.querySelector('.navy-blue'),
+};
+
+for (const theme in themes) {
+  themes[theme].addEventListener('click', function () {
+    changeTheme(themes[theme].className);
+  });
+}
+
+const initializeTheme = () => {
+  const savedTheme = localStorage.getItem('currentTheme');
+  if (savedTheme) changeTheme(savedTheme);
+};
+
+const changeTheme = function (themeName) {
+  // naming needs to be changed so we can access
+  // themes that exist in themes.css
+  const themeCSS = 'theme--' + themeName;
+
+  document.body.classList.remove(
+    'theme--' + localStorage.getItem('currentTheme')
+  );
+  document.body.classList.add(themeCSS);
+  localStorage.setItem('currentTheme', themeName);
+};
+
+initializeTheme();
+
 // ------------------ HANDLING KEY PRESS ------------------
+
 const handleKeyPress = function (e) {
   console.log(e);
 
@@ -26,6 +59,7 @@ document.addEventListener('keydown', handleKeyPress);
 document.addEventListener('keyup', handleKeyPress);
 
 // -------------------- CHANGING LAYOUT --------------------
+
 const btnToggleLayout = document.querySelector('.btn-toggle-layout');
 const fullSizeLayout = document.querySelector('.full-size-layout');
 const TKLLayout = document.querySelector('.tkl-layout');
@@ -62,35 +96,3 @@ TKLLayout.addEventListener('click', function () {
   btnToggleLayout.checked = true;
   ToggleKeyboardLayout();
 });
-
-// -------------------- THEME MANIPULATION --------------------
-
-const themes = {
-  retro: document.querySelector('.retro'),
-  navyBlue: document.querySelector('.navy-blue'),
-};
-
-for (const theme in themes) {
-  themes[theme].addEventListener('click', function () {
-    changeTheme(themes[theme].className);
-  });
-}
-
-const initializeTheme = () => {
-  const savedTheme = localStorage.getItem('currentTheme');
-  if (savedTheme) changeTheme(savedTheme);
-};
-
-const changeTheme = function (themeName) {
-  // naming needs to be changed so we can access
-  // themes that exist in themes.css
-  const themeCSS = 'theme--' + themeName;
-
-  document.body.classList.remove(
-    'theme--' + localStorage.getItem('currentTheme')
-  );
-  document.body.classList.add(themeCSS);
-  localStorage.setItem('currentTheme', themeName);
-};
-
-initializeTheme();
