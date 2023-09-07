@@ -53,29 +53,34 @@ __3.__ Start pressing those keys and have some fun! 🎉
 
 ## Limitations ⚠️
 
-❗ Please be aware of the following limitation:
+❗ Please be aware of the following limitation: ❗
 
-- This tool cannot recognize the __fn__ keypress on the keyboard due to it being a hardware key and not being registered by browser key events. As a result, pressing the __fn__ key may not produce any visual feedback within the application.
+- This tool __cannot__ recognize the __fn__ keypress on the keyboard due to it being a hardware key and not being registered by browser key events. As a result, pressing the __fn__ key may not produce any visual feedback within the application.
 <br/><br/>
 
 ## FAQs and Troubleshooting 🛠️
 
 If you encounter any issues while using the Online Keyboard Tester, check out these frequently asked questions and troubleshooting tips:
+<br/><br/>
 
-1. **Q: I'm not getting any visual feedback when pressing the 'fn' key. What should I do?**
-   - A: Unfortunately, the 'fn' key is a hardware key and is not registered by browser key events. As a result, it may not produce any visual feedback within the application. However, you can rest assured that this limitation does not affect the overall functionality of your keyboard.
+**Q: Will this tool handle touchpad keys, macros, media keys and etc.?**
+   - A: Nope, this tool is more into the basic keyboard stuff. It won't recognize touchpad, macro, media, or other fancy special keys.
+     
+**Q: Can I use this tool on mobile or tablet devices perfectly fine?**
+  - A: Designed for desktop use, but can work on mobile/tablet with an external keyboard. Visual experience may be suboptimal.
+
+**Q: No visual feedback after 'fn' key press. What to do now?**
+   - A: Unfortunately, the 'fn' key is a hardware key and is not registered by browser events. It can't be tested using this tool.
   
-2. **Q: I'm experiencing issues with certain keys on my keyboard. What should I do?**
-   - A: If you're facing problems with specific keys, it may be due to a hardware issue. Try cleaning the affected keys or consult your keyboard's user manual for troubleshooting steps.
+**Q: Certain keys doesn't register. Any recommendations?**
+   - A: It might be a hardware issue. Clean affected keys or refer to your keyboard's manual for troubleshooting.
   
-3. **Q: Does this tool work for non-standard keyboard layouts, including Apple Mac layouts?**
-   - A: This tool is primarily designed for standard Windows keyboard layouts. While it may function with non-standard layouts, including Apple Mac layouts, it may not provide an optimized experience. For the best results, we recommend using a standard Windows keyboard.
+**Q: Works for non-standard layouts, like Apple Mac?**
+   - A: Primarily designed for standard QWERTY Windows layouts. May work with others, But not optimized.
 
-4. **Q: Can I use this tool on mobile devices or tablets?**
-   - A: The Online Keyboard Tester is optimized for desktop use and may not provide the same experience on mobile devices or tablets. For the best results, we recommend using a desktop or laptop computer.
-
-5. **Q: Are there any specific browsers recommended for using this application?**
-   - A: The Online Keyboard Tester is designed to work on most modern web browsers, including Chrome, Firefox, Safari, and Edge. However, for the smoothest experience, we recommend using the latest version of Chrome.
+**Q: Recommended browsers for this web app?**
+   - A: Tested on Firefox, Edge and chrome. For the slickest experience, latest Chrome version.
+     
 <br/><br/>
 
 ## Project Origins 🌱
@@ -93,5 +98,6 @@ You can contact me at mostafaabbac@gmail.com 📧
 ## License 📝
 
 This project is open-source and available under the [MIT License](https://opensource.org/license/mit/). 📜
+<br/><br/>
 
 Enjoy testing your keyboard! 😊
