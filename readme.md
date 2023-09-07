@@ -24,15 +24,15 @@ Just head over to __[Online Keyboard Tester Website](https://mostafa-abbasi.gith
 
 If you want to run this project locally or contribute to its development, follow these simple steps:
 
-1. Clone the repository to your local machine:
+__1.__ Clone the repository to your local machine:
 
 ```bash
   git clone https://github.com/mostafa-abbasi/KeyboardTester.git
 ```
 
-2. Open the index.html file in your web browser.
+__2.__ Open the index.html file in your web browser.
 
-3. Start pressing those keys and have some fun! 🎉
+__3.__ Start pressing those keys and have some fun! 🎉
 
 ## Project Origins 🌱
 
