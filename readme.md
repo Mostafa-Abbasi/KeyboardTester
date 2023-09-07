@@ -10,7 +10,7 @@ Whether you're a programmer, gamer, or just a keyboard enthusiast, it's essentia
 
 ## How to Use 🚀
 
-Just head over to __[Online Keyboard Tester Website](https://mostafa-abbasi.github.io/KeyboardTester)__ and start pressing those keys! The website will instantly respond to your every keystroke. 💥
+Just head over to __[Online Keyboard Tester Website](https://mostafa-abbasi.github.io/KeyboardTester)__ and start pressing those keys! The website will instantly respond to your every keystroke. 
 
 ## Features 🌟
 
@@ -36,7 +36,7 @@ If you want to run this project locally or contribute to its development, follow
 
 ## Project Origins 🌱
 
-This project began as a creative exploration of web development and a playful fascination with keyboards. Over time, it has evolved into a handy tool for anyone seeking to validate their keyboard's functionality. In addition to its core feature, the Online Keyboard Tester now offers additional options like themes and layouts to enhance the testing experience. 🎈
+This project began as a creative exploration of web development and a playful fascination with keyboards. Over time, it has evolved into a handy tool for anyone seeking to validate their keyboard's functionality. In addition to its core feature, the Online Keyboard Tester now offers additional options like themes and layouts to enhance the testing experience. 
 
 ## Contributing 🤝
 
