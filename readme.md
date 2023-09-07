@@ -1,43 +1,51 @@
-Customizable Keyboard UI
+# Online Keyboard Tester ⌨️
 
-Welcome to the Customizable Keyboard UI project! This project provides a versatile and visually appealing user interface for keyboard enthusiasts and designers alike. With a range of themes and layout options, you can create a personalized keyboard experience tailored to your preferences.
-Features
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
-    Theme Customization: Choose from a selection of pre-defined themes or create your own to match your style.
+## Overview
 
-    Layout Options: Easily toggle between full-size and tenkeyless (TKL) layouts for a seamless typing experience.
+Welcome to the Online Keyboard Tester! This interactive web application is designed to help you ensure that every key on your keyboard is functioning perfectly.
 
-    Realistic Key Press Simulation: Enjoy a lifelike typing experience with interactive key press animations.
+Whether you're a programmer, gamer, or just a keyboard enthusiast, it's essential to have confidence in your keyboard's reliability.
 
-Getting Started
+You can check out the project [here](https://mostafa-abbasi.github.io/KeyboardTester).
 
-To get started with this project, follow these steps:
+## Features
 
-    Clone the repository to your local machine.
+- Key Testing: Press each key on your keyboard to check if it is functioning properly.
 
-    Open the index.html file in your preferred web browser.
+- Themes: Customize the appearance of the tester with different themes. Choose from Retro or Navy Blue to match your style.
 
-    Explore the various themes, layout options, and interactive key press effects.
+- Layout Options: Choose between `full-size` and `tenkeyless (TKL)` layouts for testing.
 
-How to Customize
-Theme Customization
+## Getting Started
 
-    Open themes.css and add your custom theme using the provided color variables.
+If you want to run this project locally or contribute to its development, follow these simple steps:
 
-    In script.js, add a new entry in the themes object with a class name and event listener for your custom theme.
+- Clone the repository to your local machine:
 
-Layout Customization
+```bash
+  git clone https://github.com/mostafa-abbasi/KeyboardTester.git
+```
 
-    Customize the layout by modifying the CSS classes in style.css.
+- Open the index.html file in your web browser.
 
-    Update the layout switch logic in script.js to accommodate any additional layout options.
+- Start pressing those keys and have some fun!
 
-Contributing
+## How it started
 
-We welcome contributions from the community! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
-License
+This project was created as a practice project to explore web development and have some fun with keyboards. it has since evolved into a useful tool for anyone who wants to check their keyboard's functionality.
 
-This project is licensed under the MIT License.
-Acknowledgments
+In addition to its core feature, the Online Keyboard Tester offers additional features like themes and layouts to make the testing experience more enjoyable.
 
-Special thanks to [Your Name] for [specific contributions or inspiration].
+## Contributing
+
+If you're interested in contributing to this project, feel free to fork the repository and submit your own improvements. Whether it's adding new themes, enhancing keyboard layout options, or improving the code, your contributions are always welcome!
+
+You can contact me at mostafaabbac@gmail.com
+
+## License
+
+This project is open-source and available under the [MIT License](https://mostafa-abbasi.github.io/KeyboardTester).
+
+Enjoy testing your keyboard! 🚀
