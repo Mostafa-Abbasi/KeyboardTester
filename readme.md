@@ -29,17 +29,17 @@ Just head over to __[Online Keyboard Tester Website](https://mostafa-abbasi.gith
 This tool is your go-to, whether you're part of:
 <br/><br/>
 
-**New Keyboard Owners**: Test your fresh or pre-loved keyboards and laptops for reliable functionality
+- **New Keyboard Owners**: Test your fresh or pre-loved keyboards and laptops for reliable functionality
 <br/><br/>
-**Keyboard Geeks**: Ensure your personalized mech-keyboards rock after all those fancy modifications
+- **Keyboard Geeks**: Ensure your personalized mech-keyboards rock after all those fancy modifications
 <br/><br/>
-**Fellow Gamers**: Put your gaming keyboard to the test with speed and simultaneous key pressing checks
+- **Fellow Gamers**: Put your gaming keyboard to the test with speed and simultaneous key pressing checks
 <br/><br/>
-**Programmers**: Guarantee those keystrokes are flawless for your smooth coding adventures all-day long
+- **Programmers**: Guarantee those keystrokes are flawless for your smooth coding adventures all-day long
 <br/><br/>
-**Programmers (Again!)**: Dive into the codebase and get inspired on that sleek standard keyboard layout
+- **Programmers (Again!)**: Dive into the codebase and get inspired on that sleek standard keyboard layout
 <br/><br/>
-**Standard Windows Layout Users**: If you roll with the standard Windows layout, it's fine-tuned for you!
+- **Standard Windows Layout Users**: If you roll with the standard Windows layout, it's fine-tuned for you!
 <br/><br/>
 
 ## Getting Started 🧑‍💻
