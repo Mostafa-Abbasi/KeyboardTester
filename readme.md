@@ -59,9 +59,12 @@ __3.__ Start pressing those keys and have some fun! 🎉
 
 ## Limitations ⚠️
 
-❗ Please be aware of the following limitation: ❗
+❗ Please be aware of the following limitations: ❗
 
-- This tool __cannot__ recognize the __fn__ keypress on the keyboard due to it being a hardware key and not being registered by browser key events. As a result, pressing the __fn__ key may not produce any visual feedback within the application.
+- This tool __cannot__ recognize the __`fn`__ keypress on the keyboard due to it being a hardware key and not being registered by browser key events. As a result, pressing the __`fn`__ key may not produce any visual feedback within the application.
+- While this tool is accessible on mobile browsers, please be aware that it is primarily optimized for desktop use. If possible, we __highly recommend__ utilizing a tablet or switching your mobile orientation to horizontal mode for an enhanced experience. For optimal performance, consider using a desktop if available.
+- Special keys like media keys, macro keys, or other non-standard keys found on certain keyboards or laptops __are not__ compatible with this tool.
+- Layouts other than QWERTY __may not__ display accurately.
 <br/><br/>
 
 ## FAQs and Troubleshooting 🛠️
