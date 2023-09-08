@@ -89,7 +89,6 @@ If you encounter any issues while using the Online Keyboard Tester, check out th
 
 **Q: Recommended browsers for this web app?**
    - A: Tested on Firefox, Edge and chrome. For the slickest experience, latest Chrome version is recommended.
-     
 <br/><br/>
 
 ## Project Origins 🌱
