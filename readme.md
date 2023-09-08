@@ -26,15 +26,15 @@ Just head over to __[Online Keyboard Tester Website](https://mostafa-abbasi.gith
 
 ## Who is this Tool For? 🎯
 
-This tool is designed for a wide range of users who rely on keyboards for various purposes. It caters to:
+This tool is your go-to, whether you're part of:
+<br/><br/>
 
-- **New Keyboard Owners**: Test your fresh or pre-loved keyboards or laptops for peak performance
-- **Keyboard Geeks**: Ensure your personalized keyboards rock after all those fancy modifications
-- **fellow Gamers**: Check your keyboard's speed and simultaneous key pressing with this tool
-- **Programmers**: Ensure every keystroke is flawless for smooth coding sessions
-- **Standard Windows Layout Users**:  If you roll with the standard Windows layout, this one's fine-tuned just for you!
-
-While it may work with other layouts, including non-standard and Apple Mac layouts, please note that the tool is primarily tailored for Windows keyboards.
+- **New Keyboard Owners**: Test your fresh or pre-loved keyboards and laptops for reliable functionality
+- **Keyboard Geeks**: Ensure your personalized mech-keyboards rock after all those fancy modifications
+- **Fellow Gamers**: Put your gaming keyboard to the test with speed and simultaneous key pressing checks
+- **Programmers**: Guarantee those keystrokes are flawless for your smooth coding adventures all-day long
+- **Programmers (Again!)**: Dive into the codebase and get inspired on that sleek standard keyboard layout
+- **Standard Windows Layout Users**: If you roll with the standard Windows layout, it's fine-tuned for you!
 <br/><br/>
 
 ## Getting Started 🧑‍💻
@@ -68,7 +68,7 @@ If you encounter any issues while using the Online Keyboard Tester, check out th
    - A: Nope, this tool is more into the basic keyboard stuff. It will not recognize touchpad, macro, media, etc.
      
 **Q: Can I use this tool on mobile or tablet devices perfectly fine?**
-  - A: Designed for desktop usage, but can work on mobile/tablet with an external keyboard and inferior visuals.
+  - A: Tuned for desktop use, but can work on mobile/tablet with an external keyboard and inferior visual exprience.
 
 **Q: No visual feedback after 'fn' key press. What to do now?**
    - A: 'fn' key is a hardware key and is not registered by browser key events. It can't be tested using this tool.
