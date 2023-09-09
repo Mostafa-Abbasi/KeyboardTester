@@ -1,6 +1,6 @@
 'use strict';
 
-// -------------------- THEME MANIPULATION --------------------
+// --------------------- THEME MANIPULATION ---------------------
 
 const themes = {
   retro: document.querySelector('.retro'),
@@ -32,7 +32,7 @@ const changeTheme = function (themeName) {
 
 initializeTheme();
 
-// ------------------ HANDLING KEY PRESS ------------------
+// ------------------- HANDLING KEY PRESS -------------------
 
 const handleKeyPress = function (e) {
   console.log(e);
@@ -58,7 +58,7 @@ const handleKeyPress = function (e) {
 document.addEventListener('keydown', handleKeyPress);
 document.addEventListener('keyup', handleKeyPress);
 
-// -------------------- CHANGING LAYOUT --------------------
+// --------------------- CHANGING LAYOUT ---------------------
 
 const btnToggleLayout = document.querySelector('.btn-toggle-layout');
 const fullSizeLayout = document.querySelector('.full-size-layout');

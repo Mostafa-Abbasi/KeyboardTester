@@ -1,6 +1,7 @@
 .theme--retro {
   /* -------- DEFAULT KEYBOARD THEME | RETRO -------- */
   /* - INSPIRED BY KBParadise VX80 Olivette Neo TKL - */
+
   --key-border-radius: 0.6rem;
 
   --box-shadow-keycaps: var(--box-shadow-keycaps-value)
@@ -37,6 +38,7 @@
 .theme--navy-blue {
   /* -------- OPTIONAL KEYBOARD THEME | NAVY BLUE -------- */
   /* ------- INSPIRED BY Keychron Q3 QMK NAVY BLUE ------- */
+
   --key-border-radius: 1.2rem;
 
   --box-shadow-keycaps-value: inset 0 -0.2rem 0 0.3rem;
@@ -72,3 +74,7 @@
   --color-keycaps-bg-pressed: #f8f9fa;
   --color-keycaps-shadow-pressed: #adb5bd;
 }
+
+/* *** You can define more themes here... *** */
+/* Be sure to also write the essential codes for 
+added themes in both index.html & style.css */
