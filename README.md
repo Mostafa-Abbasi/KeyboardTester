@@ -1,7 +1,7 @@
 ## Online Keyboard Tester ⌨️
 
 <p align="center">
-  <img src="https://via.placeholder.com/468x300?text=App+Screenshot+Here" alt="App Screenshot">
+  <img src="https://raw.githubusercontent.com/Mostafa-Abbasi/KeyboardTester/main/img/demo.gif" alt="App Demo GIF">
 </p>
 
 <br/><br/>
