@@ -1,6 +1,6 @@
 # The MIT License (MIT)
 
-Copyright © 20233 Mostafa Abbasi
+Copyright © 2023 Mostafa Abbasi
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
