@@ -1,6 +1,3 @@
-# Worksapce settings for VS CODE
+# editor settings 'vs code'
 WebDevChallenges.code-workspace
-# Prettier settings 
-.prettierrc
-# General git file
-.gitattributes
+.vscode/settings.json
