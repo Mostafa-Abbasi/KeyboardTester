@@ -1,2 +1,6 @@
 # Worksapce settings for VS CODE
 WebDevChallenges.code-workspace
+# Prettier settings 
+.prettierrc
+# General git file
+.gitattributes
