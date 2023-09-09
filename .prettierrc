@@ -1,4 +1,3 @@
-# general prettier config
 {
   "singleQuote": true,
   "arrowParens": "avoid"
