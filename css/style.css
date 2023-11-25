@@ -51,50 +51,51 @@ body {
   cursor: pointer;
 }
 
-/* toggle button styling */
+/* slider styling */
 
-.btn-toggle-layout {
-  height: 0;
-  width: 0;
-
-  visibility: hidden;
+.slider-container {
+  width: 80%;
+  margin: 1.6rem auto;
+  text-align: center;
 }
 
-.toggle-label {
-  position: relative;
-  display: block;
-  width: 8rem;
-  height: 4rem;
-  margin: 0 2.4rem 0 2rem;
-  border-radius: 4rem;
-  text-indent: -9999px;
-  background: var(--color-bg-toggle);
+.slider {
+  width: 100%;
+  transform: translateY(1.8rem);
+}
+
+/* Styling the track */
+input[type='range']::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(to right, #555555, #f1f3f5);
+}
+
+/* Styling the thumb */
+input[type='range']::-webkit-slider-thumb {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: #555; /* Thumb color */
   cursor: pointer;
+  -webkit-appearance: none;
+  transition: all 0.3s ease; /* Smooth transition */
+  transform: translateY(-0.4rem);
 }
 
-.toggle-label:after {
-  content: '';
-  position: absolute;
-  top: 0.3rem;
-  left: 0.35rem;
-  border-radius: 3.4rem;
-  width: 3.4rem;
-  height: 3.4rem;
-  background: #fff;
-  transition: 0.2s;
+/* Highlighting the thumb on hover */
+input[type='range']::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 10px rgb(84, 84, 84, 0.4); /* Add a subtle box-shadow on hover */
+  transform: translateY(-0.4rem) scale(1.2);
 }
 
-input:checked + .toggle-label {
-  background: var(--color-bg-toggle);
-}
-
-input:checked + .toggle-label:after {
-  left: calc(100% - 0.35rem);
-  transform: translateX(-100%);
-}
-
-.toggle-label:active:after {
-  width: 5.2rem;
+.slider-value {
+  font-size: 2.4em;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #555; /* Match the thumb color */
+  background: #fff; /* Background color for the value */
+  box-shadow: 0 0 10px rgb(84, 84, 84, 0.1); /* Add a subtle box-shadow to the value */
 }
 
 .theme-section {
@@ -178,7 +179,12 @@ input:checked + .toggle-label:after {
   /* whitespace in the tkl layout increased 
   to 7fr for better region seperation */
   grid-template-columns: 215fr 7fr 45fr;
-  max-width: 99rem;
+  max-width: 100rem;
+}
+
+.seventy-five-percent {
+  grid-template-columns: 79rem 0 16.5rem;
+  max-width: 86rem;
 }
 
 .key {
