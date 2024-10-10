@@ -347,8 +347,13 @@ input[type='range']::-webkit-slider-thumb:hover {
   grid-row: 2;
 }
 
-/* windows and context menu icons */
+/* styling enter key as return sign  */
+.enter span {
+  transform: translateY(-0.25rem);
+  font-size: 2.8rem;
+}
 
+/* windows and context menu icons */
 .metaleft svg {
   width: 1.8rem;
   height: 1.8rem;
