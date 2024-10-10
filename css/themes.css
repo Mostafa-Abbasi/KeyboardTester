@@ -30,7 +30,9 @@
   --color-keycaps-bg-accent: #e2e3e6;
   --color-keycaps-shadow-accent: #97a0a8;
 
-  --color-keycaps-legends-pressed: #2f3674;
+  --color-keycaps-legends-pressing: #f03e3e;
+
+  --color-keycaps-legends-pressed: #080e42;
   --color-keycaps-bg-pressed: #a4a9b0;
   --color-keycaps-shadow-pressed: #7f8489;
 }
@@ -69,6 +71,8 @@
   --color-keycaps-legends-accent: #fff;
   --color-keycaps-bg-accent: #4f71e4;
   --color-keycaps-shadow-accent: #2e43ad;
+
+  --color-keycaps-legends-pressing: #f03e3e;
 
   --color-keycaps-legends-pressed: #555;
   --color-keycaps-bg-pressed: #f8f9fa;

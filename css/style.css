@@ -237,6 +237,10 @@ input[type='range']::-webkit-slider-thumb:hover {
   box-shadow: var(--box-shadow-keycaps-pressed-hover);
 }
 
+.key.key-pressing-simulation {
+  color: var(--color-keycaps-legends-pressing);
+}
+
 /* __________________________________
    ||||||||||||||||||||||||||||||||||
    |||| GENERAL KB LAYOUT STYLES ||||
@@ -368,6 +372,10 @@ input[type='range']::-webkit-slider-thumb:hover {
   fill: var(--color-keycaps-legends-pressed);
 }
 
+.metaleft.key-pressing-simulation svg {
+  fill: var(--color-keycaps-legends-pressing);
+}
+
 .metaright svg {
   width: 1.8rem;
   height: 1.8rem;
@@ -380,6 +388,10 @@ input[type='range']::-webkit-slider-thumb:hover {
 
 .metaright.key--pressed svg {
   fill: var(--color-keycaps-legends-pressed);
+}
+
+.metalright.key-pressing-simulation svg {
+  fill: var(--color-keycaps-legends-pressing);
 }
 
 .contextmenu svg {
@@ -395,6 +407,10 @@ input[type='range']::-webkit-slider-thumb:hover {
 
 .contextmenu.key--pressed svg {
   stroke: var(--color-keycaps-legends-pressed);
+}
+
+.contextmenu.key-pressing-simulation svg {
+  stroke: var(--color-keycaps-legends-pressing);
 }
 
 /* spacebar legend */
@@ -450,6 +466,13 @@ input[type='range']::-webkit-slider-thumb:hover {
 .arrowdown.key--pressed svg,
 .arrowright.key--pressed svg {
   fill: var(--color-keycaps-legends-pressed);
+}
+
+.arrowup.key-pressing-simulation svg,
+.arrowleft.key-pressing-simulation svg,
+.arrowdown.key-pressing-simulation svg,
+.arrowright.key-pressing-simulation svg {
+  fill: var(--color-keycaps-legends-pressing);
 }
 
 /**********************/
