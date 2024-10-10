@@ -363,6 +363,20 @@ input[type='range']::-webkit-slider-thumb:hover {
   fill: var(--color-keycaps-legends-pressed);
 }
 
+.metaright svg {
+  width: 1.8rem;
+  height: 1.8rem;
+  fill: var(--color-keycaps-legends);
+}
+
+.metaright .key--accent svg {
+  fill: var(--color-keycaps-legends-accent);
+}
+
+.metaright.key--pressed svg {
+  fill: var(--color-keycaps-legends-pressed);
+}
+
 .contextmenu svg {
   width: 2rem;
   height: 2rem;
