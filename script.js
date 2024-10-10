@@ -38,7 +38,16 @@ const handleKeyPress = function (e) {
   console.log(e);
 
   e.preventDefault();
-  const keyElement = document.querySelector('.' + e.code.toLowerCase());
+  // Edge case mentioned in https://github.com/Mostafa-Abbasi/KeyboardTester/issues/4
+  // Detect AltGr key press (Alt + Control pressed simultaneously)
+  const isAltGr = e.ctrlKey && e.altKey && !e.shiftKey && !e.metaKey;
+
+  let keyElement;
+  if (isAltGr) {
+    keyElement = document.querySelector('.' + 'AltRight');
+  } else {
+    keyElement = document.querySelector('.' + e.code.toLowerCase());
+  }
 
   if (e.type === 'keydown') {
     keyElement.classList.add('key-pressing-simulation');
